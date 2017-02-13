@@ -446,5 +446,5 @@ the user friendly environment of `Conda`.
 
 %%%%%%%%%%%%%
 
-The document main page is [this page](http://machinelearninguru.com/computer_vision/installation/opencv/opencv.html) and it's been translated to Markdown using [pandoc](http://pandoc.org/).
+The document main page is [this page](http://machinelearninguru.com/computer_vision/installation/opencv/opencv.html) and it's been translated to Markdown mostly by using [pandoc](http://pandoc.org/).
 
