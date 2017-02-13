@@ -108,32 +108,12 @@ named *py3k* is as follows:
 ```shell
  source activate py3k
 ```
-![sdssdsdasd](_images/env-activated.png  "asd")
+
 After the activation, the sign of the environment should appear in the
 command line. The screen will be something similar to the below image:
 
 
-
-
-<div align="center">
-
-<div id="figure1" class="responsive" style="padding: 0 6px;width: 80%;">
-
-<div class="img">
-
-[![Linkedin](![sd](_images/env-activated.png  "The virtual environment indicator is active.")_images/env-activated.png){width="600"
-height="400"}](_images/env-activated.png)
-<div class="desc">
-
-**Figure 1:** The virtual environment indicator is active.
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+![fig1](_images/env-activated.png  "Figure 1:** The virtual environment indicator is active.")
 
 *There is a caveat for working in virtual environments*. Although the
 workspace is the virtual environment, if the user apply ```Sudo``` command for any installation, the
