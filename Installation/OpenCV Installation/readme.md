@@ -136,8 +136,8 @@ command line. The screen will be something similar to the below image:
 
 <div class="img">
 
-[![Linkedin](../../../_images/topics/computer_vision/installation/opencv/env-activated.png){width="600"
-height="400"}](../../../_images/topics/computer_vision/installation/opencv/env-activated.png)
+[![Linkedin](_images/env-activated.png){width="600"
+height="400"}](_images/env-activated.png)
 <div class="desc">
 
 **Figure 1:** The virtual environment indicator is active.
