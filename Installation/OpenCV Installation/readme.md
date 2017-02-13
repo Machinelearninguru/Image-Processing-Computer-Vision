@@ -396,7 +396,7 @@ prompt by the python environment. This task can be done by make a copy
 of the file in the same folder and with another name:
 
 ```shell
-cd /usr/local/lib/python3.5/site-packages//
+cd /usr/local/lib/python3.5/site-packages/
 sudo cp cv2.cpython-35m-x86\_64-linux-gnu.so cv2.so
 ```
 
@@ -406,7 +406,7 @@ Anaconda virtual environment. In out specific case, it can be done by
 the following procedure:
 
 ```shell
-cd \~/anaconda/envs/py3k/lib/python3.5/site-packages
+cd ~/anaconda/envs/py3k/lib/python3.5/site-packages
 ln -s /usr/local/lib/python3.5/site-packages/cv2.so cv2.so
 ```
 
@@ -432,7 +432,7 @@ Then the version can be checked by the following:
 ```shell
 python
 import cv2
-cv2.\_\_version\_\_
+cv2.__version__
 ```
 
 Summary
