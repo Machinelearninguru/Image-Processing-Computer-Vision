@@ -464,38 +464,29 @@ can be verified by:
  ls /usr/local/lib/python3.5/site-packages/
 ```
 
-As it is obvious, the name of the library file is <span
-class="inner_shadow">cv2.cpython-35m-x86\_64-linux-gnu.so</span> which
-needs to be changed to <span class="inner_shadow">cv2.so</span> as
+As it is obvious, the name of the library file is `cv2.cpython-35m-x86\_64-linux-gnu.so` which
+needs to be changed to `cv2.so` as
 prompt by the python environment. This task can be done by make a copy
 of the file in the same folder and with another name:
 
-<div class="shell-wrap">
+```shell
+cd /usr/local/lib/python3.5/site-packages//
+sudo cp cv2.cpython-35m-x86\_64-linux-gnu.so cv2.so
+```
 
-Installing OpenCV
-
--   cd /usr/local/lib/python3.5/site-packages//
--   sudo cp cv2.cpython-35m-x86\_64-linux-gnu.so cv2.so
-
-</div>
-
-After this phase, the <span class="inner_shadow">cv2.so</span> has to be
+After this phase, the `cv2.so` has to be
 moved to the right directory which is corresponding to the relevant
 Anaconda virtual environment. In out specific case, it can be done by
 the following procedure:
 
-<div class="shell-wrap" style="width: 700px">
-
-Installing OpenCV
-
--   cd \~/anaconda/envs/py3k/lib/python3.5/site-packages
--   ln -s /usr/local/lib/python3.5/site-packages/cv2.so cv2.so
-
-</div>
+```shell
+cd \~/anaconda/envs/py3k/lib/python3.5/site-packages
+ln -s /usr/local/lib/python3.5/site-packages/cv2.so cv2.so
+```
 
 The first command take us to the desired environment library and the
 second one makes symbolic link between the two files. In order to grasp
-a better idea of what is <span class="inner_shadow">ln -s</span> and how
+a better idea of what is `ln -s` and how
 it works please refer to [this official ubuntu
 documentation](http://manpages.ubuntu.com/manpages/trusty/man1/ln.1.html).
 
@@ -506,24 +497,17 @@ In order to test OpenCV, we have to activate the virtual environment
 first. The output must include the environment indicator as we discussed
 before.
 
-<div class="shell-wrap" style="width: 700px">
-
-Activating Anaconda Virtual Environment
-
--   source activate py3k
-
-</div>
+```shell
+source activate py3k
+```
 
 Then the version can be checked by the following:
-<div class="shell-wrap" style="width: 700px">
 
-Check OpenCV and its Installed Version
-
--   python
--   import cv2
--   cv2.\_\_version\_\_
-
-</div>
+```shell
+python
+import cv2
+cv2.\_\_version\_\_
+```
 
 Summary {#testopencv}
 -------
@@ -531,60 +515,5 @@ Summary {#testopencv}
 Now the OpenCV3 is installed in Anaconda virtual environment. This
 virtual environment installation helps to avoid likely conflicts between
 packages between different projects and more over enrich the user with
-the user friendly environment of <span
-class="inner_shadow">conda</span>.
+the user friendly environment of `Conda`.
 
-[Go Top](#post_top)
-<div id="disqus_thread">
-
-</div>
-
-Please enable JavaScript to view the [comments powered by
-Disqus.](https://disqus.com/?ref_noscript)
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div id="footer">
-
-<div class="container">
-
-<div class="row">
-
-<div class="section 3u 6u(narrower) 12u$(mobilep)">
-
-### Related Posts:
-
--   [<span
-    class="label">Twitter</span>](https://twitter.com/M_L_Guru){.icon
-    .fa-twitter}
--   [<span
-    class="label">GitHub</span>](https://github.com/Machinelearninguru){.icon
-    .fa-github}
--   [<span
-    class="label">LinkedIn</span>](https://www.linkedin.com/groups/12030461){.icon
-    .fa-linkedin}
-
-<div class="copyright">
-
--   © Machine Learning Guru. All rights reserved
--   Design: [HTML5 UP](http://html5up.net)
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
