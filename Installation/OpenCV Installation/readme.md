@@ -334,36 +334,12 @@ ccmake ..
 
 When the interface showed up, the configuration with `button c` has to be done to run the `make interface`. The a screen as below will:
 come up:
-<div align="center">
 
-<div id="figure2" class="responsive" style="padding: 0 6px;width: 80%;">
 
-<div class="img">
-
-[![Linkedin](../../../_images/topics/computer_vision/installation/opencv/ccmakemain.png){width="600"
-height="400"}](../../../_images/topics/computer_vision/installation/opencv/ccmakemain.png)
-<div class="desc">
-
-**Figure 2:** The GUI for cmake command in order to compile OpenCV.
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+![fig2](_images/ccmakemain.png  "Figure 2:** The GUI for cmake command in order to compile OpenCV.")
 
 Some options here have to found and changed. Some options have to
-checked to be correct if not changed. The options are shown as below:
-<div class="shell-wrap" style="width: 800px">
-
-compile options
-
-</div>
-
-As it is obvious in the above options, the `PYTHON3` related options are targeted and it
-is because we are working on a python3 environment. The options `PYTHON3\_EXECUTABLE`, `PYTHON3\_INCLUDE\_DIR` and `PYTHON3\_NUMPY\_INCLUDE\_DIRS` must refer to
+checked to be correct if not changed. As it is obvious in the above options, the `PYTHON3` related options are targeted and it is because we are working on a python3 environment. The options `PYTHON3\_EXECUTABLE`, `PYTHON3\_INCLUDE\_DIR` and `PYTHON3\_NUMPY\_INCLUDE\_DIRS` must refer to
 the *corresponding virtual environment* path although the `PYTHON3\_LIBRARY` must refer to the
 *corresponding root path* and otherwise is not acceptable by the cmake
 command. The `WITH\_CUDA` and `BUILD\_opencv\_hdf` options turned to off due
@@ -376,25 +352,8 @@ one of the options that was recommended by the cmake GUI after running
 the configure button. After running the configuration, the generation
 option will appear as below:
 
-<div align="center">
 
-<div id="figure3" class="responsive" style="padding: 0 6px;width: 80%;">
-
-<div class="img">
-
-[![Linkedin](../../../_images/topics/computer_vision/installation/opencv/cmakegenerate.png){width="600"
-height="400"}](../../../_images/topics/computer_vision/installation/opencv/cmakegenerate.png)
-<div class="desc">
-
-**Figure 3:** Generation Option Appearance.
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+![fig3](_images/cmakegenerate.png  "Figure 3:** Generation Option Appearance.")
 
 After generation of the make file, it is time to make and basically
 compile the OpenCV using the following comman:
@@ -406,25 +365,8 @@ make -j8
 The option `-jX` depends on system
 architecture and it employs parallel computing for faster processing.
 The screen shot of compiling process is as below:
-<div align="center">
 
-<div id="figure4" class="responsive" style="padding: 0 6px;width: 80%;">
-
-<div class="img">
-
-[![Linkedin](../../../_images/topics/computer_vision/installation/opencv/compilesnap.png){width="600"
-height="400"}](../../../_images/topics/computer_vision/installation/opencv/compilesnap.png)
-<div class="desc">
-
-**Figure 4:** Compiling Process.
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+![fig4](_images/compilesnap.png  "Figure 4:** Compiling Process.")
 
 Installing OpenCV {#installingopencv}
 -----------------
