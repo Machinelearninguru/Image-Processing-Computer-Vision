@@ -129,7 +129,7 @@ simply be employed:
 source deactivate
 ```
 
-Installing dependencies {#dependencies}
+Installing dependencies
 -----------------------
 
 Loosely speaking, installing the dependencies is the main part of OpenCV
@@ -139,7 +139,7 @@ dependencies that it needs. moreover if installing extra OpenCV modules
 is desired, it certainly adds to the number of requirements. This
 section is aimed to describe what are these requirements.
 
-### I - System Update {#sysupdate}
+### I - System Update
 
 First of all, the system packages should be updated to their latest
 version. `sudo apt-get update` downloads
@@ -167,7 +167,7 @@ which is the handy GUI for the cmake configuration process!
 sudo apt-get install build-essential pkg-config cmake cmake-curses-gui
 ```
 
-### II - Installing Python libraries {#pythinlibs}
+### II - Installing Python libraries
 
 Of course python is required for installing OpenCV. Moreover installing
 some famous packages as `Numpy` and
@@ -181,7 +181,7 @@ sudo apt-get install python-dev python-numpy
 sudo apt-get install python-scipy
 ```
 
-### III - Installing GUI libraries {#pythinlibs}
+### III - Installing GUI libraries
 
 OpenCV employs the HighGUI library("high-level graphical user
 interface") to open windows, display, read and write images and videos
@@ -201,7 +201,7 @@ sudo apt-get install libgtk-3-dev
 sudo apt-get install libgtkglext1 libgtkglext1-dev
 ```
 
-### III - Installing image processing libraries {#imglibs}
+### III - Installing image processing libraries
 
 OpenCV is at first an image processing and manipulation library. The
 primitive ability for that is to load/save images. Moreover it should be
@@ -222,7 +222,7 @@ Some numbers are shown for package indications. For example
 regarding to the root system which might be different in different
 Ubuntu versions and different updates.
 
-### IV - Installing video processing libraries {#vidlibs}
+### IV - Installing video processing libraries
 
 Same as images, for read/write and process videos the relevant
 dependencies must be installed as follows:
@@ -244,7 +244,7 @@ sudo apt-get install ffmpeg x264 libx264-dev
 sudo apt-get install libv4l-0 v4l-utils
 ```
 
-### V - Installing multi-processing library {#vidlibs}
+### V - Installing multi-processing library
 
 TBB is a library for leveraging multi-core processing. OpenCV supports
 that so it is beneficial to install it.
@@ -253,7 +253,7 @@ that so it is beneficial to install it.
 sudo apt-get install libtbb-dev
 ```
 
-Download OpenCV from source {#downloadopencv}
+Download OpenCV from source 
 ---------------------------
 
 To download OpenCV from source there are two ways to do it. The first
@@ -286,7 +286,7 @@ unzip opencv\_contrib.zip
 
 At this moment the OpenCV is downloaded from the source and it ready to
 be compiled.
-Compiling OpenCV {#compilingopencv}
+Compiling OpenCV 
 ----------------
 
 From now on we have to be in the virtual environment and it should be
@@ -306,7 +306,7 @@ For comiling OpenCV both `cmake` and
 this tutorial is to use the later one due to better graphical
 illustrations.
 
-### (I) Using cmake command {#cmake}
+### (I) Using cmake command
 
 The first one can be use for initialization of important options. We
 start by using the `ccmake` command:
@@ -324,7 +324,7 @@ The implementation of cmake command can be something similar to above,
 however the preference is to use the GUI as mentioned before and will be
 demonstrated in the subsequent section.
 
-### (II) Using cmake GUI: ccmake .. {#cmake}
+### (II) Using cmake GUI: ccmake .. 
 
 The executed commands could be run by `ccmake ..` command in a much easier way. Let's run it in the terminal":
 
@@ -368,7 +368,7 @@ The screen shot of compiling process is as below:
 
 ![fig4](_images/compilesnap.png  "Figure 4:** Compiling Process.")
 
-Installing OpenCV {#installingopencv}
+Installing OpenCV
 -----------------
 
 The last step is to install OpenCV using the following commands:
@@ -416,7 +416,7 @@ a better idea of what is `ln -s` and how
 it works please refer to [this official ubuntu
 documentation](http://manpages.ubuntu.com/manpages/trusty/man1/ln.1.html).
 
-Testing OpenCV Installation {#testopencv}
+Testing OpenCV Installation 
 ---------------------------
 
 In order to test OpenCV, we have to activate the virtual environment
@@ -435,11 +435,12 @@ import cv2
 cv2.\_\_version\_\_
 ```
 
-Summary {#testopencv}
+Summary
 -------
 
 Now the OpenCV3 is installed in Anaconda virtual environment. This
 virtual environment installation helps to avoid likely conflicts between
 packages between different projects and more over enrich the user with
 the user friendly environment of `Conda`.
+
 
