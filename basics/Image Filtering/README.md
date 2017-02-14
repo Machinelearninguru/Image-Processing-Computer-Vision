@@ -19,22 +19,14 @@ image has 1 channel where a color image has 3 channels (for an RGB). In
 this tutorial we are going to work on a grayscale image shown in Figure
 1 and apply different convolution kernels on it.
 
-[![](../../../_images/topics/computer_vision/basics/convolution/image.jpg){width="600"
-height="400"}](../../../_images/topics/computer_vision/basics/convolution/image.jpg)
-
-**Figure 1:** The original grayscale image
-
+![fig1](_images/image.jpg  "Figure 1:** The original grayscale image")
 
 If we zoom on the very top-left corner of the image, we can see the
 pixels of the image. You can see the pixels on the top-left corner of
 the image (first five rows and five columns) and their corresponding
 values in Figure 2.
 
-[![](../../../_images/topics/computer_vision/basics/convolution/7.jpg){width="600"
-height="400"}](../../../_images/topics/computer_vision/basics/convolution/7.jpg)
-
-**Figure 2:** The first 5 columns and rows of the image in Figure 1
-
+![fig2](_images/7.jpg  "Figure 2:** The first 5 columns and rows of the image in Figure 1")
 
 You can load and plot the image as a **Numpy** array using **skimage**
 library in python:
@@ -84,6 +76,9 @@ of image convolution is calculated as follows:
 -   Put the center of the kernel at every pixel of the image (element of
     the image matrix). Then each element of the kernel will stand on top
     of an element of the image matrix.
+    
+    ![fig3](_images/1.jpg  "Figure 3:** To calculate the value of convolution output at pixel (2,2), center the kernel at the same pixel position on the image matrix")
+    
 -   Multiply each element of the kernel with its corresponding element
     of the image matrix (the one which is overlapped with it)
 -   Sum up all product outputs and put the result at the same position
@@ -176,14 +171,8 @@ and you can see the filtered image after applying **sharpen** filter in
 Figure 6 and the filtered image after Histogram Equalization in Figure
 7.
 
-[![](../../../_images/topics/computer_vision/basics/convolution/sharpen.jpg){width="600"
-height="400"}](../../../_images/topics/computer_vision/basics/convolution/sharpen.jpg)
-**Figure 6:** Sharpened image
-
-
-[![](../../../_images/topics/computer_vision/basics/convolution/sharpen_eq.jpg){width="600"
-height="400"}](../../../_images/topics/computer_vision/basics/convolution/sharpen_eq.jpg)
-**Figure 7:** Sharpened image after Histogram Equalization
+![fig6](_images/sharpen.jpg  "Figure 6:** Sharpened image")
+![fig7](_images/sharpen_eq.jpg  "Figure 7:** Sharpened image after Histogram Equalization")
 
 So far, we have been using our own convolution function which was not
 written to be efficient. Hopefully, you can easily find well written
