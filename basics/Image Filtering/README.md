@@ -77,12 +77,14 @@ of image convolution is calculated as follows:
     the image matrix). Then each element of the kernel will stand on top
     of an element of the image matrix.
     
-    ![fig3](_images/1.jpg  "Figure 3:** To calculate the value of convolution output at pixel (2,2), center the kernel at the same pixel position on the image matrix")
+    ![fig3](_images/1.JPG  "Figure 3:** To calculate the value of convolution output at pixel (2,2), center the kernel at the same pixel position on the image matrix")
     
 -   Multiply each element of the kernel with its corresponding element
     of the image matrix (the one which is overlapped with it)
 -   Sum up all product outputs and put the result at the same position
     in the output matrix as the center of kernel in image matrix.
+    ![fig4](_images/3.JPG )
+    ![fig4](_images/4.JPG  "Figure 4:** Convolution calculation")
 -   For the pixels on the border of image matrix, some elements of the
     kernel might stands out of the image matrix and therefore does not
     have any corresponding element from the image matrix. In this case,
@@ -91,6 +93,7 @@ of image convolution is calculated as follows:
     can apply padding to the input matrix (based on the size of the
     kernel we might need one or more pixels padding, in our example we
     just need 1 pixel padding):
+    ![fig5](_images/6.JPG  "Figure 5:** Convolution calculation on borders")
 
 As you can see in Figure 5, the output of convolution might violate the
 input range of \[0-255\]. Even though the python packages would take
