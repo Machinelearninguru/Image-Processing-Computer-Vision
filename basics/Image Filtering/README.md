@@ -83,8 +83,10 @@ of image convolution is calculated as follows:
     of the image matrix (the one which is overlapped with it)
 -   Sum up all product outputs and put the result at the same position
     in the output matrix as the center of kernel in image matrix.
-    ![fig4](_images/3.JPG )
+    
+    ![fig4](_images/3.JPG  "Figure 4:** Convolution calculation")
     ![fig4](_images/4.JPG  "Figure 4:** Convolution calculation")
+    
 -   For the pixels on the border of image matrix, some elements of the
     kernel might stands out of the image matrix and therefore does not
     have any corresponding element from the image matrix. In this case,
@@ -93,6 +95,7 @@ of image convolution is calculated as follows:
     can apply padding to the input matrix (based on the size of the
     kernel we might need one or more pixels padding, in our example we
     just need 1 pixel padding):
+    
     ![fig5](_images/6.JPG  "Figure 5:** Convolution calculation on borders")
 
 As you can see in Figure 5, the output of convolution might violate the
@@ -267,10 +270,7 @@ plt.show()
 
 and here is what you will see when you run the code:
 
-
-[![](../../../_images/topics/computer_vision/basics/convolution/edges.jpg){width="600"
-height="400"}](../../../_images/topics/computer_vision/basics/convolution/edges.jpg)
-**Figure 7:** Filtered image
+![fig8](_images/edges.jpg  "Figure 8:** Filtered image")
 
 What about if we apply the edge detection kernel to the output of
 sharpen filter? Let's have a look at it:
@@ -300,10 +300,7 @@ plt.axis('off')
 plt.show()
 ```
 
-[![](../../../_images/topics/computer_vision/basics/convolution/edge2.jpg){width="600"
-height="400"}](../../../_images/topics/computer_vision/basics/convolution/edge2.jpg)
-<div class="desc">
-**Figure 8:** Filtered image
+![fig9](_images/edge2.jpg  "Figure 9:** Filtered image")
 
 As we mentioned before, sharpen filter bolds the edges but with the cost
 of adding noise to the image. You can clearly see these effects
