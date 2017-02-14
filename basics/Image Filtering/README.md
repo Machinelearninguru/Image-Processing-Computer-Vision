@@ -63,8 +63,8 @@ useful for a spesific task, such as sharpening, blurring, edge
 detection, and more. Let's start with the sharpening kernel which is
 defined as:
 
-\$Kernel = \\begin{bmatrix} 0 & -1 & 0 \\\\ -1 & 5 & -1 \\\\ 0 & -1 & 0
-\\end{bmatrix}\$
+$$Kernel = \begin{bmatrix} 0 & -1 & 0 \\ -1 & 5 & -1 \\ 0 & -1 & 0
+\end{bmatrix}$$
 
 You can find a list of most common kernels
 [here](https://en.wikipedia.org/wiki/Kernel_(image_processing)). As
