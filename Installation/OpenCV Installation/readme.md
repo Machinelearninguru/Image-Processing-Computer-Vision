@@ -112,13 +112,6 @@ named *py3k* is as follows:
 After the activation, the sign of the environment should appear in the
 command line. The screen will be something similar to the below image:
 
-<p align="center">
-  <b>Some Links:</b><br>
-  <a href="#">Link 1</a>
-  <br><br>
-  <img src="_images/env-activated.png">
-</p>
-
 ![fig1](_images/env-activated.png  "Figure 1:** The virtual environment indicator is active.")
 
 *There is a caveat for working in virtual environments*. Although the
