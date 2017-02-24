@@ -44,7 +44,7 @@ NVIDIA ACCELERATION ON UBUNTU
 LINUX](http://developer.download.nvidia.com/compute/redist/ffmpeg/1511-patch/FFMPEG-with-NVIDIA-Acceleration-on-Ubuntu_UG_v01.pdf)
 documentation provided by NVIDIA.
 
-Data Indicator {#DataIndicator}
+## Data Indicator
 --------------
 
 This tutorial is customized for processing multiple videos. The
@@ -63,7 +63,7 @@ find /absolute/path/to/directory/to/be/search -type f -name
     "\*.png" &gt; /absolute/path/to/save/the/output/textfile.txt
 ```
 
-Video Rotation {#Video Rotation}
+## Video Rotation
 --------------
 
 From now on the assumption is that the ".txt" file is ready and
@@ -107,30 +107,29 @@ well-formatted. The python script for processing videos is as below:
       print('file %s saved' % output_file_path)
 ```
 
-### I - Overall Code Description {#Overall Code Description }
+### I - Overall Code Description
 
-The [videos.txt]{.inner_shadow} file is saved in the absolute path.
+The `videos.txt` file is saved in the absolute path.
 **Lines 8-13** of the code reads the ".txt" file and stores each line as
-an item of a list called [files\_list]{.inner_shadow}. The loop starts
+an item of a list called `files\_list`. The loop starts
 at **line 17** process each file with the
-[subprocess.call]{.inner_shadow} command. In each loop the folder of the
+`subprocess.call` command. In each loop the folder of the
 input file is found and the output file will be stored in the same
 directory but with different naming convention which is explaned by the
-comments in the code. Each [,]{.inner_shadow} in the [
-subprocess.call]{.inner_shadow} command in the python is correspondant
-to [an empty space]{.inner_shadow} in the terminal. As an example the
+comments in the code. Each `,` in the `subprocess.call` command in the python is correspondant
+to `an empty space` in the terminal. As an example the
 correspondant shell command is as below:
 ```shell
 ffmpeg -i file\_path -filter:v transpose=-1 -vcodec nvenc -preset
     slow -b:v 5M -acodec copy output\_file\_path
 ```
 
-### II - FFmpeg Encoder {#FFmpegdescription}
+### II - FFmpeg Encoder
 
 The command executed by **FFmpeg** needs to be described. Each of the
-elements started by [-]{.inner_shadow} are calling specific operations
+elements started by `-` are calling specific operations
 and the command follows by them execute the desired operation. For
-example [-vcodec]{.inner_shadow} indicator will specify the **codec** to
+example `-vcodec` indicator will specify the **codec** to
 be used by **FFmpeg** and **nvenc** which follows by that point to the
 codec. More details can be found at [FFmpeg Filters
 Documentation](http://ffmpeg.org/ffmpeg-filters.html). The fllowing
@@ -148,7 +147,7 @@ Table 1 {#table-1 align="center"}
   -b:v        set the video bitrate   5M            Set to 5M
   -acodec     set the audio codec     copy          only copied & no encoding
 
-The [-vf]{.inner_shadow} is the main command which its full
+The `-vf` is the main command which its full
 documentation is available at
 [here](https://ffmpeg.org/ffmpeg.html#filter_005foption) and it has the
 **filter options**.
@@ -164,7 +163,7 @@ python /absolute/path/to/python/file
 
 As a consideration, if we are working on any specific virtual
 environment it has to be activated at first.
-Summary {#Summary}
+## Summary
 -------
 
 This tutorial demonstrated how to process a video and specifictly
