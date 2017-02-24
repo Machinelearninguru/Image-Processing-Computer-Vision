@@ -14,9 +14,9 @@ Introduction {#intro}
 **FFmpeg** is one of the most famous multimedia frameworks wich is
 widely used for processeing videos. In order to encode the video,
 certainly a video encoder must be used. The popular
-[x264]{.inner_shadow} is the one which is widely used however it is not
-super fast! The lastest [NVIDIA GPUs]{.inner_shadow} contain a
-hardware-based video encoder called [NVENC]{.inner_shadow} which is much
+`x264` is the one which is widely used however it is not
+super fast! The lastest `NVIDIA GPUs` contain a
+hardware-based video encoder called `NVENC` which is much
 faster than traditional ones. In order to be able to utilize this
 gpu-accelerated encoder, FFmpeg must be installed with NVENC support.
 The full documentation of FFmpeg integrated with NVIDIA can be fount at
@@ -30,9 +30,9 @@ In this tutorial the main goal is to show how to do video rotation with
 GPU-accelerated libraries in Linux. In this tutorial we do not use the
 terminal commands directly for employing the FFmpeg with NVENC support.
 Instead the python interface is being used to run commands in the
-terminal. This can be done using [subprocess]{.inner_shadow} python
+terminal. This can be done using `subprocess` python
 module. This module is employed for execution and dealing external
-commands, intended to supercede the [os.sys]{.inner_shadow} module. The
+commands, intended to supercede the `os.sys` module. The
 trivial method os its usage will be explained in this tutorial. Please
 refer to [this
 documentation](https://docs.python.org/2/library/subprocess.html) for
@@ -49,13 +49,13 @@ Data Indicator {#DataIndicator}
 
 This tutorial is customized for processing multiple videos. The
 assumption is that the full path of each video is stored in a
-[.txt]{.inner_shadow} file in line-by-line format. The example of the
+`.txt` file in line-by-line format. The example of the
 ".txt" file is as below:
 
 ![fig1](_images/txtfileformat.png  "Figure 1:** The format of .txt file.")
 
 As a guidance if a recursive search for specific files in a directory
-and its subdirectories with extension [".png"]{.inner_shadow} is
+and its subdirectories with extension `".png"` is
 desired, the following method in command line is useful and it saves the
 output as a ".txt" file:
 ```shell
