@@ -1,83 +1,9 @@
-<!--
-    Arcana by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<link href="../../../syntaxhighlighter_3.0.83/styles/shCore.css" rel="stylesheet" type="text/css"></link>
-<link href="../../../syntaxhighlighter_3.0.83/styles/shThemeDefault.css" rel="stylesheet" type="text/css"></link>
-<link href="../../../assets/css/shell.css" rel="stylesheet" type="text/css"></link>
-<link href="../../../assets/css/table.css" rel="stylesheet" type="text/css"></link>
-<div id="page-wrapper">
 
-<!-- Header -->
-<div id="header">
-
-<!-- Nav --> <nav id="nav">
--   [Home](../../../index.php)
--   [&gt;](#)
--   [Image Processing & Computer Vision](../../../topics.php?my_id=1)
--   [&gt;](#)
--   [Video Processing](../../../posts.php?my_id=7)
-
-</nav>
-
-</div>
-
-<!-- Main -->
-<div class="section wrapper style1">
-
-<div class="container">
-
-<div class="row 200%">
-
-<div class="4u 12u(narrower)">
-
-<div id="sidebar">
-
-<!-- Sidebar -->
-<div class="section">
-
-### ![](../../../_images/logo2.png) [Machine Learning Guru](../../../index.html){#logo}
-
-Machine Learning and Computer Vision tutorials using open source
-packages.
-
-</div>
-
-<div class="section">
-
-### Sections
-
--   [Introduction](#intro)
--   [Data Indicator](#DataIndicator)
--   [Video Rotation](#Video%20Rotation)
--   [Code Execution](#Code%20Execution)
--   [Summary](#Summary)
-
-</div>
-
-</div>
-
-</div>
-
-<div class="8u 12u(narrower) important(narrower)">
-
-<div id="content">
-
-<!--    #######################             -->
-<!--    #######################             -->
-<!--    Content: Your post starts here      -->
-<!--    #######################             -->
-<!--    #######################             -->
-<article id="post_top">
-<header align="center">
-Rotation of Video using FFMPEG With NVIDIA GPU Acceleration on Ubuntu
+# Rotation of Video using FFMPEG With NVIDIA GPU Acceleration on Ubuntu
 ---------------------------------------------------------------------
 
 This tutorial deals with video rotation using GPU accelerated libraries
 supported by FFMPEG in Ubuntu 16.04.
-
-</header>
 <!--    #######################  ####################### ####################### #######################            -->
 <!--    #######################  ####################### ####################### #######################            -->
 <!--    #######################  ####################### ####################### #######################            -->
@@ -125,55 +51,24 @@ This tutorial is customized for processing multiple videos. The
 assumption is that the full path of each video is stored in a
 [.txt]{.inner_shadow} file in line-by-line format. The example of the
 ".txt" file is as below:
-<div align="center">
 
-<div id="figure1" class="responsive" style="padding: 0 6px;width: 80%;">
-
-<div class="img">
-
-[![Linkedin](../../../_images/topics/computer_vision/video_processing/ffmpeg_rotate_video/txtfileformat.png){width="600"
-height="400"}](../../../_images/topics/computer_vision/video_processing/ffmpeg_rotate_video/txtfileformat.png)
-<div class="desc">
-
-**Figure 1:** The format of .txt file.
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+![fig1](_images/txtfileformat.png  "Figure 1:** The format of .txt file.")
 
 As a guidance if a recursive search for specific files in a directory
 and its subdirectories with extension [".png"]{.inner_shadow} is
 desired, the following method in command line is useful and it saves the
 output as a ".txt" file:
-<div class="shell-wrap" style="width: 800px">
-
-Search for Specific Files
-
--   find /absolute/path/to/directory/to/be/search -type f -name
+```shell
+find /absolute/path/to/directory/to/be/search -type f -name
     "\*.png" &gt; /absolute/path/to/save/the/output/textfile.txt
-
-</div>
+```
 
 Video Rotation {#Video Rotation}
 --------------
 
 From now on the assumption is that the ".txt" file is ready and
 well-formatted. The python script for processing videos is as below:
-<div class="panel panel-default">
-
-<div class="panel-heading">
-
-Rotation of video using FFmpeg with NVENC encoder
-
-</div>
-
-<div id="pycode" class="panel-body">
-
-``` {data-enlighter-group="code3" data-enlighter-title="90 degree clockwise"}
+```python
   import subprocess
   import os
 
@@ -212,49 +107,6 @@ Rotation of video using FFmpeg with NVENC encoder
       print('file %s saved' % output_file_path)
 ```
 
-``` {data-enlighter-group="code3" data-enlighter-title="90 degree counterclockwise"}
-  import subprocess
-  import os
-
-  # Pre...
-  textfile_path = 'videos.txt'
-  output_prefix = 'front'
-
-  # Read the text file line by line.
-  with open(textfile_path) as f:
-      content = f.readlines()
-
-  # Remove whitespace characters like `\n` at the end of each line
-  files_list = [x.strip() for x in content]
-
-  # Transpose 90 degree & Counterclockwise
-  # It already save the video file using the the named defined by output_name.
-  for file_num, file_path in enumerate(files_list, start=1):
-
-      # Get the file name with extension
-      file_name = os.path.basename(file_path)
-
-      # Get the file name without extension
-      raw_file_name = os.path.basename(file_name).split('.')[0]
-
-      # Get the input file directory path.
-      file_dir = os.path.dirname(file_path)
-
-      # Form the output file full path.
-      output_file_path = file_dir + '/' + output_prefix + '_' + raw_file_name + '.mov'
-
-      print('processing file: %s' % file_path)
-      subprocess.call(
-          ['ffmpeg', '-i', file_path, '-vf', 'transpose=2', '-vcodec', 'nvenc',
-          '-preset', 'slow', '-b:v', '5M',
-           '-acodec', 'copy', output_file_path])
-      print('file %s saved' % output_file_path)
-```
-
-</div>
-
-</div>
-
 ### I - Overall Code Description {#Overall Code Description }
 
 The [videos.txt]{.inner_shadow} file is saved in the absolute path.
@@ -268,14 +120,10 @@ comments in the code. Each [,]{.inner_shadow} in the [
 subprocess.call]{.inner_shadow} command in the python is correspondant
 to [an empty space]{.inner_shadow} in the terminal. As an example the
 correspondant shell command is as below:
-<div class="shell-wrap" style="width: 800px">
-
-Build Essentials
-
--   ffmpeg -i file\_path -filter:v transpose=-1 -vcodec nvenc -preset
+```shell
+ffmpeg -i file\_path -filter:v transpose=-1 -vcodec nvenc -preset
     slow -b:v 5M -acodec copy output\_file\_path
-
-</div>
+```
 
 ### II - FFmpeg Encoder {#FFmpegdescription}
 
@@ -287,7 +135,6 @@ be used by **FFmpeg** and **nvenc** which follows by that point to the
 codec. More details can be found at [FFmpeg Filters
 Documentation](http://ffmpeg.org/ffmpeg-filters.html). The fllowing
 Table, summarize the indicators:
-<div id="page-wrap">
 
 Table 1 {#table-1 align="center"}
 =======
@@ -301,8 +148,6 @@ Table 1 {#table-1 align="center"}
   -b:v        set the video bitrate   5M            Set to 5M
   -acodec     set the audio codec     copy          only copied & no encoding
 
-</div>
-
 The [-vf]{.inner_shadow} is the main command which its full
 documentation is available at
 [here](https://ffmpeg.org/ffmpeg.html#filter_005foption) and it has the
@@ -312,13 +157,10 @@ Code Execution {#Code Execution}
 
 In order to run the python file we go to the terminal and execute the
 following:
-<div class="shell-wrap" style="width: 800px">
+```shell
+python /absolute/path/to/python/file
 
-Build Essentials
-
--   python /absolute/path/to/python/file
-
-</div>
+```
 
 As a consideration, if we are working on any specific virtual
 environment it has to be activated at first.
@@ -331,104 +173,4 @@ rotating that using **FFmpeg** and Nvidia GPU accelerated library called
 the **.txt** file and looping through all files. Moreover it enables the
 user with options which are more complex to be directly employed in the
 terminal environment.
-<!--    #######################  ####################### ####################### #######################            -->
-<!--    #######################  ####################### ####################### #######################            -->
-<!--    #######################  ####################### ####################### #######################            -->
-<!--    #######################  ####################### ####################### #######################            -->
-</article>
-[Go Top](#post_top)
-<!--    #######################  ####################### ####################### #######################            -->
-<!--    #######################  ####################### ####################### #######################            -->
-<!--    #######################  ####################### ####################### #######################            -->
-<!--    #######################  ####################### ####################### #######################            -->
-<!--    #######################             -->
-<!--             Comments                   -->
-<div id="disqus_thread">
 
-</div>
-
-<script>
-                                (function() { // DON'T EDIT BELOW THIS LINE
-                                    var d = document,
-                                        s = d.createElement('script');
-                                    s.src = '//machine-learning-guru.disqus.com/embed.js';
-                                    s.setAttribute('data-timestamp', +new Date());
-                                    (d.head || d.body).appendChild(s);
-                                })();
-                            </script>
-<noscript>
-Please enable JavaScript to view the [comments powered by
-Disqus.](https://disqus.com/?ref_noscript)
-</noscript>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Footer -->
-<div id="footer">
-
-<div class="container">
-
-<div class="row">
-
-<div class="section 3u 6u(narrower) 12u$(mobilep)">
-
-### Related Posts:
-
-<!-- <ul class="links">
-                            <li><a href="#">Mattis et quis rutrum</a></li>
-                            <li><a href="#">Suspendisse amet varius</a></li>
-                            <li><a href="#">Sed et dapibus quis</a></li>
-                        </ul>
-                    </section>
-                    <section class="3u 6u$(narrower) 12u$(mobilep)">
-                        <h3>More Links to Stuff</h3>
-                        <ul class="links">
-                            <li><a href="#">Duis neque nisi dapibus</a></li>
-                            <li><a href="#">Sed et dapibus quis</a></li>
-                            <li><a href="#">Rutrum accumsan sed</a></li>
-                        </ul>
-                    </section>-->
-</div>
-</div>
-<!-- Icons -->
--   [[Twitter]{.label}](https://twitter.com/M_L_Guru){.icon .fa-twitter}
--   [[GitHub]{.label}](https://github.com/Machinelearninguru){.icon
-    .fa-github}
--   [[LinkedIn]{.label}](https://www.linkedin.com/groups/12030461){.icon
-    .fa-linkedin}
-
-<!-- Copyright -->
-<div class="copyright">
-
--   © Machine Learning Guru. All rights reserved
--   Design: [HTML5 UP](http://html5up.net)
-
-</div>
-
-</div>
-</div>
-<!-- Scripts -->
-<script src="../../../assets/js/jquery.min.js"></script>
-<script src="../../../assets/js/jquery.dropotron.min.js"></script>
-<script src="../../../assets/js/skel.min.js"></script>
-<script src="../../../assets/js/util.js"></script>
-<script src="../../../assets/js/main.js"></script>
-<script id="dsq-count-scr" src="//machine-learning-guru.disqus.com/count.js" async></script>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
