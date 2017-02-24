@@ -8,7 +8,7 @@ supported by FFMPEG in Ubuntu 16.04.
 <!--    #######################  ####################### ####################### #######################            -->
 <!--    #######################  ####################### ####################### #######################            -->
 <!--    #######################  ####################### ####################### #######################            -->
-Introduction {#intro}
+## Introduction
 ------------
 
 **FFmpeg** is one of the most famous multimedia frameworks wich is
@@ -136,6 +136,15 @@ be used by **FFmpeg** and **nvenc** which follows by that point to the
 codec. More details can be found at [FFmpeg Filters
 Documentation](http://ffmpeg.org/ffmpeg-filters.html). The fllowing
 Table, summarize the indicators:
+
+| Attribute        | Description           | option   | Description  |
+| ------------- |:-------------:| -----:| -----:|
+| -i      | input argument | file\_path | path to the input file|
+|-vf      |   alias for -filter:v  |   transpose=1 | clockwise rotation by 90|
+|-vcodec  |   Set the video codec   |  nvenc      |   Nvidia Gpu accelerated library|
+|-preset  |   increase the quality  |  slow       |   improves quality|
+|-b:v      |  set the video bitrate |  5M         |   Set to 5M|
+|-acodec   |  set the audio codec   |  copy       |   only copied & no encoding|
 
 Table 1 {#table-1 align="center"}
 =======
