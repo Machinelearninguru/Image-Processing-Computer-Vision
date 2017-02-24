@@ -137,7 +137,8 @@ codec. More details can be found at [FFmpeg Filters
 Documentation](http://ffmpeg.org/ffmpeg-filters.html). The fllowing
 Table, summarize the indicators:
 
-#### Table 1
+<p align="center">
+<b>Table 1</b>
 =======
 | Attribute        | Description           | option   | Description  |
 | :-------------: |:-------------:| :-----:| :-----:|
@@ -147,6 +148,7 @@ Table, summarize the indicators:
 |  -preset  |   increase the quality  | slow |   improves quality  |
 |  -b:v      |  set the video bitrate | 5M |   Set to 5M  |
 |  -acodec   |  set the audio codec   | copy |   only copied & no encoding  |
+</p>
 
 
 The `-vf` is the main command which its full
