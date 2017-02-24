@@ -138,7 +138,7 @@ Documentation](http://ffmpeg.org/ffmpeg-filters.html). The fllowing
 Table, summarize the indicators:
 
 
-<b>Table 1</b>
+**Table 1**
 =======
 | Attribute        | Description           | option   | Description  |
 | :-------------: |:-------------:| :-----:| :-----:|
