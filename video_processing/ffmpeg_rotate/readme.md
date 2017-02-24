@@ -137,6 +137,8 @@ codec. More details can be found at [FFmpeg Filters
 Documentation](http://ffmpeg.org/ffmpeg-filters.html). The fllowing
 Table, summarize the indicators:
 
+Table 1 {#table-1 align="center"}
+=======
 | Attribute        | Description           | option   | Description  |
 | ------------- |:-------------:| -----:| -----:|
 | -i      | input argument | file\_path | path to the input file|
@@ -146,17 +148,6 @@ Table, summarize the indicators:
 |-b:v      |  set the video bitrate |  5M         |   Set to 5M|
 |-acodec   |  set the audio codec   |  copy       |   only copied & no encoding|
 
-Table 1 {#table-1 align="center"}
-=======
-
-  Attribute   Description             Option        Description
-  ----------- ----------------------- ------------- --------------------------------
-  -i          input argument          file\_path    path to the input file
-  -vf         alias for -filter:v     transpose=1   clockwise rotation by 90
-  -vcodec     Set the video codec     nvenc         Nvidia Gpu accelerated library
-  -preset     increase the quality    slow          improves quality
-  -b:v        set the video bitrate   5M            Set to 5M
-  -acodec     set the audio codec     copy          only copied & no encoding
 
 The `-vf` is the main command which its full
 documentation is available at
