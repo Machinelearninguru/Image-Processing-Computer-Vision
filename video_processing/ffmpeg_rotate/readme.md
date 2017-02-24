@@ -52,10 +52,8 @@ assumption is that the full path of each video is stored in a
 `.txt` file in line-by-line format. The example of the
 ".txt" file is as below:
 <p align="center">
-  <b>Some Links:</b><br>
-  <a href="#">Link 1</a>
-  <br><br>
   <img src="_images/txtfileformat.png">
+  <b>Figure 1:** The format of .txt file.</b><br>
 </p>
 ![fig1](_images/txtfileformat.png  "Figure 1:** The format of .txt file.")
 
