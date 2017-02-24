@@ -52,10 +52,9 @@ assumption is that the full path of each video is stored in a
 `.txt` file in line-by-line format. The example of the
 ".txt" file is as below:
 <p align="center">
-  <img src="_images/txtfileformat.png">
-  <b>Figure 1:** The format of .txt file.</b><br>
+  <img src="_images/txtfileformat.png"><br>
+  <b>Figure 1: The format of .txt file.</b><br>
 </p>
-![fig1](_images/txtfileformat.png  "Figure 1:** The format of .txt file.")
 
 As a guidance if a recursive search for specific files in a directory
 and its subdirectories with extension `".png"` is
