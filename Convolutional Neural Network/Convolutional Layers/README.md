@@ -351,7 +351,7 @@ to the network as a pure convolution is a linear operation in
 Mathematics point of view. One of the most common activation functions
 in the area of deep learning is **RELU** which is defined as:
 
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/105feb881e0c5bf2b596093a4b0dff5f.svg?invert_in_darkmode" align=middle width=164.2146pt height=16.438356pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/f90cc2eae2be613dcd5666264b6272b0.svg?invert_in_darkmode" align=middle width=164.2146pt height=16.438356pt/></p>
 
 If you want to add RELU to our latest version of convolutional layer,
 you just need to replace `return output` with
@@ -370,7 +370,7 @@ some usefull details:
     its filters and biases. Then, you can easily calculate its number of
     parameters using the following equation:
 
-    $$\text{number of parameters} = (F_w \times F_h \times d_i + 1) \times d_o$$
+<img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/32a586c45cf0f3120e5ebb68915ec6f0.svg?invert_in_darkmode" align=middle width=351.2025pt height=23.88969pt/>
 
 
     where $d_i$, and $d_o$ are depth (\# of channels) of the input
