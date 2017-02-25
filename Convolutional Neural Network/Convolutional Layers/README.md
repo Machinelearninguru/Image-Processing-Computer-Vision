@@ -6,7 +6,6 @@ A comprehensive tutorial towards 2D Convolutional layers
 
 Introduction
 ------------
-$$\text{number of parameters} = (F_w \times F_h \times d_i + 1) \times d_o$$
 
 2D Convolutional Layers constitute Convolutional Neural Networks (CNNs)
 along with Pooling and fully-connected layers and create the basis of
@@ -352,11 +351,7 @@ to the network as a pure convolution is a linear operation in
 Mathematics point of view. One of the most common activation functions
 in the area of deep learning is **RELU** which is defined as:
 
-<<<<<<< HEAD
-$$ RELU(x) = max(x, 0) $$
-=======
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/f90cc2eae2be613dcd5666264b6272b0.svg?invert_in_darkmode" align=middle width=164.2146pt height=16.438356pt/></p>
->>>>>>> 37bb5515021a0502e4e9da72abbad018aae180ab
 
 If you want to add RELU to our latest version of convolutional layer,
 you just need to replace `return output` with
@@ -375,11 +370,7 @@ some usefull details:
     its filters and biases. Then, you can easily calculate its number of
     parameters using the following equation:
 
-<<<<<<< HEAD
-$$\text{number of parameters} = (F_w \times F_h \times d_i + 1) \times d_o$$
-=======
-<img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/32a586c45cf0f3120e5ebb68915ec6f0.svg?invert_in_darkmode" align=middle width=351.2025pt height=23.88969pt/>
->>>>>>> 37bb5515021a0502e4e9da72abbad018aae180ab
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/38cb4271050f99f4f846a00910dde404.svg?invert_in_darkmode" align=middle width=350.88075pt height=16.438356pt/></p>
 
 
     where $d_i$, and $d_o$ are depth (\# of channels) of the input
@@ -414,3 +405,4 @@ $$\text{number of parameters} = (F_w \times F_h \times d_i + 1) \times d_o$$
 
 **What Next?** In the next post we will get more familiar with
 backpropagation and how to train a convolutional neural network.
+
