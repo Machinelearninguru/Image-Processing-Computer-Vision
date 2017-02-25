@@ -6,7 +6,6 @@ A comprehensive tutorial towards 2D Convolutional layers
 
 Introduction
 ------------
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/38cb4271050f99f4f846a00910dde404.svg?invert_in_darkmode" align=middle width=350.88075pt height=16.438356pt/></p>
 
 2D Convolutional Layers constitute Convolutional Neural Networks (CNNs)
 along with Pooling and fully-connected layers and create the basis of
@@ -36,13 +35,12 @@ convolutions with strides one and two, respectively.
 
 Note that ,you can have different strides horizontally and vertically.
 You can use the following equations to calculate the exact size of the
-convolution output for an input with the size of (width = \$W\$, height
-= \$H\$) and a Filter with the size of (width = \$F\_w\$, height =
-\$F\_h\$):
+convolution output for an input with the size of (width = <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/84c95f91a742c9ceb460a83f9b5090bf.svg?invert_in_darkmode" align=middle width=18.13053pt height=21.69783pt/>, height
+= <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/7b9a0316a2fcd7f01cfd556eedf72e96.svg?invert_in_darkmode" align=middle width=15.32223pt height=21.69783pt/>) and a Filter with the size of (width = <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/a6f127b4375ffe34a939afe6f6d88a07.svg?invert_in_darkmode" align=middle width=20.71245pt height=21.69783pt/>, height =
+<img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/1ab079395027c7fee523b46ac98a4e9a.svg?invert_in_darkmode" align=middle width=18.589065pt height=21.69783pt/>):
 
-output width = \\dfrac{W-F\_w+2P}{S\_w}+1
-
-output height = \\dfrac{H-F\_h+2P}{S\_h}+1
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/1007d29ec0d1c66f578ea22be4689b30.svg?invert_in_darkmode" align=middle width=249.40905pt height=36.09507pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/4bc21c1e2ef5ec53ed371edf9a9fab1f.svg?invert_in_darkmode" align=middle width=247.67325pt height=36.09507pt/></p>
 
 where \$s\_w\$ and \$s\_h\$ are horizontal and vertical stride of the
 convolution, respectively, and \$P\$ is the amount of zero padding added
@@ -56,8 +54,7 @@ scheme which determine the output size, namely **'SAME'** and
 **'VALID'** padding schemes. In 'SAME' padding scheme, in which we have
 zero padding, the size of output will be
 
-output height = ceil(\\dfrac{H}{S\_h})
-output width = ceil(\\dfrac{W}{S\_w})
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/7281ba59279296e2b5148cc2b893b6d9.svg?invert_in_darkmode" align=middle width=426.8385pt height=36.09507pt/></p>
 
 If the required number of pixels for padding to have the desired output
 size is a even number, we can simply add half of that to each side of
@@ -67,21 +64,15 @@ of the input (for horizontal padding) or the top and the bottom sides of
 the input (for vertical padding). Here is how Tensorflow calculates
 required padding in each side:
 
-padding along height = P\_h = max((output height-1)\*S\_h + F\_h - H, 0)
-
-padding along width = P\_w = max((output width-1)\*S\_w + F\_w - W, 0)
-
-padding top = P\_t = Floor(\\dfrac{P\_h}{2})
-padding left = P\_l = Floor(\\dfrac{P\_w}{2})
-
-text{padding bottom} = P\_h - P\_t \\qquad \\qquad \\text{padding
-right} = P\_w - P\_l
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/8306be941129dcf27d8b09ef447e398d.svg?invert_in_darkmode" align=middle width=521.62605pt height=16.438356pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/d60118b3946920a43247967f9eaf3b2f.svg?invert_in_darkmode" align=middle width=522.58635pt height=16.438356pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/b5cce0ee4b88deabb525e7ff72f1d868.svg?invert_in_darkmode" align=middle width=515.9352pt height=33.629475pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/8195c3020edae6015bd8f1d340aa8a67.svg?invert_in_darkmode" align=middle width=433.98795pt height=14.611872pt/></p>
 
 Similarly, in the 'VALID' padding scheme which we do not add any zero
 padding to the input, the size of the output would be
 
-text{output height} = ceil(\\dfrac{H-F\_h+1}{S\_h})
-text{output width} = ceil(\\dfrac{W-F\_w+1}{S\_w})
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/4c011d601ffc424c9759e62ee49cdd29.svg?invert_in_darkmode" align=middle width=557.4327pt height=36.09507pt/></p>
 
 Let's get back to the Convolutional layer. A convolution layer does
 exactly the same: applying a filter on an input in convolutionl manner.
@@ -352,7 +343,11 @@ to the network as a pure convolution is a linear operation in
 Mathematics point of view. One of the most common activation functions
 in the area of deep learning is **RELU** which is defined as:
 
+<<<<<<< HEAD
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/f90cc2eae2be613dcd5666264b6272b0.svg?invert_in_darkmode" align=middle width=164.2146pt height=16.438356pt/></p>
+=======
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/f90cc2eae2be613dcd5666264b6272b0.svg?invert_in_darkmode" align=middle width=164.2146pt height=16.438356pt/></p>
+>>>>>>> 37bb5515021a0502e4e9da72abbad018aae180ab
 
 If you want to add RELU to our latest version of convolutional layer,
 you just need to replace `return output` with
@@ -371,7 +366,11 @@ some usefull details:
     its filters and biases. Then, you can easily calculate its number of
     parameters using the following equation:
 
+<<<<<<< HEAD
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/38cb4271050f99f4f846a00910dde404.svg?invert_in_darkmode" align=middle width=350.88075pt height=16.438356pt/></p>
+=======
+<img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/32a586c45cf0f3120e5ebb68915ec6f0.svg?invert_in_darkmode" align=middle width=351.2025pt height=23.88969pt/>
+>>>>>>> 37bb5515021a0502e4e9da72abbad018aae180ab
 
 
     where $d_i$, and $d_o$ are depth (\# of channels) of the input
@@ -406,4 +405,3 @@ some usefull details:
 
 **What Next?** In the next post we will get more familiar with
 backpropagation and how to train a convolutional neural network.
-
