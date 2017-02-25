@@ -359,6 +359,7 @@ If you want to add RELU to our latest version of convolutional layer,
 you just need to replace `return output` with
 `return np.maximum(output, 0)`
 
+![equation](http://latex.codecogs.com/gif.latex?Concentration%3D%5Cfrac%7BTotalTemplate%7D%7BTotalVolume%7D) 
 
 Good to know 
 ------------
