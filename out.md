@@ -42,8 +42,8 @@ convolution output for an input with the size of (width = <img src="https://rawg
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/1007d29ec0d1c66f578ea22be4689b30.svg?invert_in_darkmode" align=middle width=249.40905pt height=36.09507pt/></p>
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/4bc21c1e2ef5ec53ed371edf9a9fab1f.svg?invert_in_darkmode" align=middle width=247.67325pt height=36.09507pt/></p>
 
-where <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/9b9b57cc812f2598082fbae95c2eb73d.svg?invert_in_darkmode" align=middle width=17.84706pt height=13.38744pt/> and <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/830b6bb7e31ccb49ce56184a3eca880b.svg?invert_in_darkmode" align=middle width=15.72384pt height=13.38744pt/> are horizontal and vertical stride of the
-convolution, respectively, and <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/df5a289587a2f0247a5b97c1e8ac58ca.svg?invert_in_darkmode" align=middle width=13.15908pt height=21.69783pt/> is the amount of zero padding added
+where <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/9b9b57cc812f2598082fbae95c2eb73d.svg?invert_in_darkmode" align=middle width=17.84706pt height=13.38744pt/> and <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/830b6bb7e31ccb49ce56184a3eca880b.svg?invert_in_darkmode" align=middle width=15.72384pt height=13.38744pt/> are horizontal and vertical stride of the
+convolution, respectively, and <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/df5a289587a2f0247a5b97c1e8ac58ca.svg?invert_in_darkmode" align=middle width=13.15908pt height=21.69783pt/> is the amount of zero padding added
 to the border of the image (Look at the [previous post]() if you are not
 familiar with the zero padding concept). However, the output width or
 height calculated from these equations might be a non-integer value. In
@@ -365,12 +365,10 @@ some usefull details:
 
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/38cb4271050f99f4f846a00910dde404.svg?invert_in_darkmode" align=middle width=350.88075pt height=16.438356pt/></p>
 
-<img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/32a586c45cf0f3120e5ebb68915ec6f0.svg?invert_in_darkmode" align=middle width=351.2025pt height=23.88969pt/>
-
-
-    where $d\_i$, and $d\_o$ are depth (\# of channels) of the input
+    where $d_i$, and $d_o$ are depth (\# of channels) of the input
     and depth of the output, respectively. Note that the one inside the
     parenthesis is to count the biases.
+
 -   **Locally-Connected Layer:** This type of layer is quite the same as
     the Convolutional layer explained in this post but with only one
     (important) difference. In the Convolutional layer the filter was
