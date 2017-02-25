@@ -42,8 +42,8 @@ convolution output for an input with the size of (width = <img src="https://rawg
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/1007d29ec0d1c66f578ea22be4689b30.svg?invert_in_darkmode" align=middle width=249.40905pt height=36.09507pt/></p>
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/4bc21c1e2ef5ec53ed371edf9a9fab1f.svg?invert_in_darkmode" align=middle width=247.67325pt height=36.09507pt/></p>
 
-where $s_w$ and $s_h$ are horizontal and vertical stride of the
-convolution, respectively, and $P$ is the amount of zero padding added
+where <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/9b9b57cc812f2598082fbae95c2eb73d.svg?invert_in_darkmode" align=middle width=17.84706pt height=13.38744pt/> and <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/830b6bb7e31ccb49ce56184a3eca880b.svg?invert_in_darkmode" align=middle width=15.72384pt height=13.38744pt/> are horizontal and vertical stride of the
+convolution, respectively, and <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/df5a289587a2f0247a5b97c1e8ac58ca.svg?invert_in_darkmode" align=middle width=13.15908pt height=21.69783pt/> is the amount of zero padding added
 to the border of the image (Look at the [previous post]() if you are not
 familiar with the zero padding concept). However, the output width or
 height calculated from these equations might be a non-integer value. In
@@ -72,7 +72,8 @@ required padding in each side:
 Similarly, in the 'VALID' padding scheme which we do not add any zero
 padding to the input, the size of the output would be
 
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/4c011d601ffc424c9759e62ee49cdd29.svg?invert_in_darkmode" align=middle width=557.4327pt height=36.09507pt/></p>
+text{output height} = ceil(\\dfrac{H-F\_h+1}{S\_h})
+text{output width} = ceil(\\dfrac{W-F\_w+1}{S\_w})
 
 Let's get back to the Convolutional layer. A convolution layer does
 exactly the same: applying a filter on an input in convolutionl manner.
@@ -349,10 +350,10 @@ If you want to add RELU to our latest version of convolutional layer,
 you just need to replace `return output` with
 `return np.maximum(output, 0)`
 
-$d_i$, and $d_o$
-
 Good to know 
 ------------
+
+<img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/672a7aeac9254219b9609330a12e55e5.svg?invert_in_darkmode" align=middle width=13.529175pt height=22.06347pt/>, and <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/2f0c3b6e9153d43aae9e4f1be895635a.svg?invert_in_darkmode" align=middle width=15.366945pt height=22.06347pt/>
 
 Know that you know how a convolutional layer works, it's time to cover
 some usefull details:
@@ -362,12 +363,13 @@ some usefull details:
     is good to know how many parameters your convolutional layer would
     add up to your network. What you train in a convolutional layer are
     its filters and biases. Then, you can easily calculate its number of
-    parameters using the following equation where $d\_i$, and $d\_o$ are depth (\# of channels) of the input
-    and depth of the output, respectively. Note that the one inside the
-    parenthesis is to count the biases.
+    parameters using the following equation:
 
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/38cb4271050f99f4f846a00910dde404.svg?invert_in_darkmode" align=middle width=350.88075pt height=16.438356pt/></p>
 
+    where $d\_i$, and $d\_o$ are depth (\# of channels) of the input
+    and depth of the output, respectively. Note that the one inside the
+    parenthesis is to count the biases.
 -   **Locally-Connected Layer:** This type of layer is quite the same as
     the Convolutional layer explained in this post but with only one
     (important) difference. In the Convolutional layer the filter was
