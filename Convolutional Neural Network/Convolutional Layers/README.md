@@ -39,9 +39,9 @@ convolution output for an input with the size of (width = \$W\$, height
 = \$H\$) and a Filter with the size of (width = \$F\_w\$, height =
 \$F\_h\$):
 
-\$\\text{output width} = \\dfrac{W-F\_w+2P}{S\_w}+1\$
+output width = \\dfrac{W-F\_w+2P}{S\_w}+1
 
-\$\\text{output height} = \\dfrac{H-F\_h+2P}{S\_h}+1\$
+output height = \\dfrac{H-F\_h+2P}{S\_h}+1
 
 where \$s\_w\$ and \$s\_h\$ are horizontal and vertical stride of the
 convolution, respectively, and \$P\$ is the amount of zero padding added
@@ -55,8 +55,8 @@ scheme which determine the output size, namely **'SAME'** and
 **'VALID'** padding schemes. In 'SAME' padding scheme, in which we have
 zero padding, the size of output will be
 
-\$\\text{output height} = ceil(\\dfrac{H}{S\_h}) \\qquad \\qquad
-\\text{output width} = ceil(\\dfrac{W}{S\_w})\$
+output height = ceil(\\dfrac{H}{S\_h})
+output width = ceil(\\dfrac{W}{S\_w})
 
 If the required number of pixels for padding to have the desired output
 size is a even number, we can simply add half of that to each side of
@@ -66,23 +66,21 @@ of the input (for horizontal padding) or the top and the bottom sides of
 the input (for vertical padding). Here is how Tensorflow calculates
 required padding in each side:
 
-\$\\text{padding along height} = P\_h = max((\\text{output
-height}-1)\*S\_h + F\_h - H, 0) \$
+padding along height = P\_h = max((output height-1)\*S\_h + F\_h - H, 0)
 
-\$\\text{padding along width} = P\_w = max((\\text{output
-width}-1)\*S\_w + F\_w - W, 0) \$
+padding along width = P\_w = max((output width-1)\*S\_w + F\_w - W, 0)
 
-\$\\text{padding top} = P\_t = Floor(\\dfrac{P\_h}{2}) \\qquad \\qquad
-\\text{padding left} = P\_l = Floor(\\dfrac{P\_w}{2})\$
+padding top = P\_t = Floor(\\dfrac{P\_h}{2})
+padding left = P\_l = Floor(\\dfrac{P\_w}{2})
 
-\$\\text{padding bottom} = P\_h - P\_t \\qquad \\qquad \\text{padding
-right} = P\_w - P\_l\$
+text{padding bottom} = P\_h - P\_t \\qquad \\qquad \\text{padding
+right} = P\_w - P\_l
 
 Similarly, in the 'VALID' padding scheme which we do not add any zero
 padding to the input, the size of the output would be
 
-\$\\text{output height} = ceil(\\dfrac{H-F\_h+1}{S\_h}) \\qquad \\qquad
-\\text{output width} = ceil(\\dfrac{W-F\_w+1}{S\_w})\$
+text{output height} = ceil(\\dfrac{H-F\_h+1}{S\_h})
+text{output width} = ceil(\\dfrac{W-F\_w+1}{S\_w})
 
 Let's get back to the Convolutional layer. A convolution layer does
 exactly the same: applying a filter on an input in convolutionl manner.
@@ -355,11 +353,11 @@ in the area of deep learning is **RELU** which is defined as:
 
 <div id="pycode" class="panel-body">
 
-\$RELU(x) = max(x, 0)\$
+RELU(x) = max(x, 0)
 
 If you want to add RELU to our latest version of convolutional layer,
-you just need to replace `return output`{.python} with
-`return np.maximum(output, 0)`{.python}.
+you just need to replace `return output` with
+`return np.maximum(output, 0)`
 
 
 Good to know 
