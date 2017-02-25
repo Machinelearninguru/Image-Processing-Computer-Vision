@@ -4,7 +4,7 @@ Undrestanding Convolutional Layers in Convolutional Neural Networks (CNNs)
 
 A comprehensive tutorial towards 2D Convolutional layers
 
-Introduction {#intro}
+Introduction
 ------------
 
 2D Convolutional Layers constitute Convolutional Neural Networks (CNNs)
@@ -111,40 +111,13 @@ the same size. Now, it sum up all matrices and output a single matrix
 which is the only channel at the output of the convolution layer. For
 better underestanding, you can have a look at Figure 2.
 
-<div align="center">
-
-<div class="responsive" style="padding: 0 6px;width: 80%;">
-
-<div class="img">
-
-[![](../../../_images/topics/computer_vision/basics/convolutional_layer_1/rgb.gif){width="600"
-height="400"}](../../../_images/topics/computer_vision/basics/convolutional_layer_1/rgb.gif)
-<div class="desc">
-
-**Figure 2:** Multi-channel input convolution
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+![fig2](_images/rgb.gif  "Figure 2:** Multi-channel input convolution")
 
 Let's modify our convolution code in the previous post and make a 2D
 Convolutional Layer:
 
-<div class="panel panel-default">
 
-<div class="panel-heading">
-
-2D Convolutional Layer
-
-</div>
-
-<div id="pycode" class="panel-body">
-
-``` {data-enlighter-title="python Code"}
+```python
 import matplotlib.pyplot as plt
 from scipy import misc
 import numpy as np
@@ -233,11 +206,6 @@ plt.imshow(image_edges_equalized, cmap=plt.cm.gray)
 plt.axis('off')
 plt.show()
 ```
-
-</div>
-
-</div>
-
 What about when the convolution layer has more than one output channels.
 In that case, the layer has a different multi-channel filter (the number
 of its channel is equal to the number of input channels) to calculate
@@ -251,17 +219,8 @@ Therefore, the number of biases in each Convolutional layer is equal to
 the number of output channels. Now, let's modify the previous code to
 handle more than one channel at output.
 
-<div class="panel panel-default">
 
-<div class="panel-heading">
-
-2D Convolutional Layer - multi-channel output
-
-</div>
-
-<div id="pycode" class="panel-body">
-
-``` {data-enlighter-title="python Code"}
+```python
 import matplotlib.pyplot as plt
 from scipy import misc
 import numpy as np
@@ -374,33 +333,10 @@ plt.imshow(img, cmap=plt.cm.gray)
 plt.axis('off')
 plt.show()
 ```
-
-</div>
-
-</div>
-
 To test the code, we created an convolutional layer which has two
 filters. A edge detection filter on all 3 channels and a blur filter.
 
-<div align="center">
-
-<div class="responsive" style="padding: 0 6px;width: 80%;">
-
-<div class="img">
-
-[![](../../../_images/topics/computer_vision/basics/convolutional_layer_1/result.png){width="600"
-height="400"}](../../../_images/topics/computer_vision/basics/convolutional_layer_1/result.png)
-<div class="desc">
-
-**Figure 3:** Results
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+![fig3](_images/result.png  "Figure 3:** Results")
 
 In brief, **stride**, **zero-padding**, and the **depth** determine the
 spatial size of the output in a convolutional layer. The depth in fact
@@ -422,12 +358,11 @@ in the area of deep learning is **RELU** which is defined as:
 \$RELU(x) = max(x, 0)\$
 
 If you want to add RELU to our latest version of convolutional layer,
-you just need to replace `return output`{.ih} with
-`return np.maximum(output, 0)`{.ih}.
+you just need to replace `return output`{.python} with
+`return np.maximum(output, 0)`{.python}.
 
-</div>
 
-Good to know {#terms}
+Good to know 
 ------------
 
 Know that you know how a convolutional layer works, it's time to cover
@@ -439,12 +374,10 @@ some usefull details:
     add up to your network. What you train in a convolutional layer are
     its filters and biases. Then, you can easily calculate its number of
     parameters using the following equation:
-    <div align="center">
 
     \$\\text{number of parameters} = (F\_w \\times F\_h \\times d\_i +
     1) \\times d\_o\$
 
-    </div>
 
     where \$d\_i\$, and \$d\_o\$ are depth (\# of channels) of the input
     and depth of the output, respectively. Note that the one inside the
