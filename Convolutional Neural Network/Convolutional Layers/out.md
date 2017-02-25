@@ -35,15 +35,15 @@ convolutions with strides one and two, respectively.
 
 Note that ,you can have different strides horizontally and vertically.
 You can use the following equations to calculate the exact size of the
-convolution output for an input with the size of (width = <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/84c95f91a742c9ceb460a83f9b5090bf.svg?invert_in_darkmode" align=middle width=18.13053pt height=21.69783pt/>, height
-= <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/7b9a0316a2fcd7f01cfd556eedf72e96.svg?invert_in_darkmode" align=middle width=15.32223pt height=21.69783pt/>) and a Filter with the size of (width = <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/a6f127b4375ffe34a939afe6f6d88a07.svg?invert_in_darkmode" align=middle width=20.71245pt height=21.69783pt/>, height =
-<img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/1ab079395027c7fee523b46ac98a4e9a.svg?invert_in_darkmode" align=middle width=18.589065pt height=21.69783pt/>):
+convolution output for an input with the size of (width = <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/84c95f91a742c9ceb460a83f9b5090bf.svg?invert_in_darkmode" align=middle width=18.13053pt height=21.69783pt/>, height
+= <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/7b9a0316a2fcd7f01cfd556eedf72e96.svg?invert_in_darkmode" align=middle width=15.32223pt height=21.69783pt/>) and a Filter with the size of (width = <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/a6f127b4375ffe34a939afe6f6d88a07.svg?invert_in_darkmode" align=middle width=20.71245pt height=21.69783pt/>, height =
+<img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/1ab079395027c7fee523b46ac98a4e9a.svg?invert_in_darkmode" align=middle width=18.589065pt height=21.69783pt/>):
 
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/1007d29ec0d1c66f578ea22be4689b30.svg?invert_in_darkmode" align=middle width=249.40905pt height=36.09507pt/></p>
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/4bc21c1e2ef5ec53ed371edf9a9fab1f.svg?invert_in_darkmode" align=middle width=247.67325pt height=36.09507pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/1007d29ec0d1c66f578ea22be4689b30.svg?invert_in_darkmode" align=middle width=249.40905pt height=36.09507pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/4bc21c1e2ef5ec53ed371edf9a9fab1f.svg?invert_in_darkmode" align=middle width=247.67325pt height=36.09507pt/></p>
 
-where <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/9b9b57cc812f2598082fbae95c2eb73d.svg?invert_in_darkmode" align=middle width=17.84706pt height=13.38744pt/> and <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/830b6bb7e31ccb49ce56184a3eca880b.svg?invert_in_darkmode" align=middle width=15.72384pt height=13.38744pt/> are horizontal and vertical stride of the
-convolution, respectively, and <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/df5a289587a2f0247a5b97c1e8ac58ca.svg?invert_in_darkmode" align=middle width=13.15908pt height=21.69783pt/> is the amount of zero padding added
+where <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/9b9b57cc812f2598082fbae95c2eb73d.svg?invert_in_darkmode" align=middle width=17.84706pt height=13.38744pt/> and <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/830b6bb7e31ccb49ce56184a3eca880b.svg?invert_in_darkmode" align=middle width=15.72384pt height=13.38744pt/> are horizontal and vertical stride of the
+convolution, respectively, and <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/df5a289587a2f0247a5b97c1e8ac58ca.svg?invert_in_darkmode" align=middle width=13.15908pt height=21.69783pt/> is the amount of zero padding added
 to the border of the image (Look at the [previous post]() if you are not
 familiar with the zero padding concept). However, the output width or
 height calculated from these equations might be a non-integer value. In
@@ -54,7 +54,7 @@ scheme which determine the output size, namely **'SAME'** and
 **'VALID'** padding schemes. In 'SAME' padding scheme, in which we have
 zero padding, the size of output will be
 
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/7281ba59279296e2b5148cc2b893b6d9.svg?invert_in_darkmode" align=middle width=426.8385pt height=36.09507pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/7281ba59279296e2b5148cc2b893b6d9.svg?invert_in_darkmode" align=middle width=426.8385pt height=36.09507pt/></p>
 
 If the required number of pixels for padding to have the desired output
 size is a even number, we can simply add half of that to each side of
@@ -64,16 +64,16 @@ of the input (for horizontal padding) or the top and the bottom sides of
 the input (for vertical padding). Here is how Tensorflow calculates
 required padding in each side:
 
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/8306be941129dcf27d8b09ef447e398d.svg?invert_in_darkmode" align=middle width=521.62605pt height=16.438356pt/></p>
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/d60118b3946920a43247967f9eaf3b2f.svg?invert_in_darkmode" align=middle width=522.58635pt height=16.438356pt/></p>
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/b5cce0ee4b88deabb525e7ff72f1d868.svg?invert_in_darkmode" align=middle width=515.9352pt height=33.629475pt/></p>
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/8195c3020edae6015bd8f1d340aa8a67.svg?invert_in_darkmode" align=middle width=433.98795pt height=14.611872pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/8306be941129dcf27d8b09ef447e398d.svg?invert_in_darkmode" align=middle width=521.62605pt height=16.438356pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/d60118b3946920a43247967f9eaf3b2f.svg?invert_in_darkmode" align=middle width=522.58635pt height=16.438356pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/b5cce0ee4b88deabb525e7ff72f1d868.svg?invert_in_darkmode" align=middle width=515.9352pt height=33.629475pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/8195c3020edae6015bd8f1d340aa8a67.svg?invert_in_darkmode" align=middle width=433.98795pt height=14.611872pt/></p>
 
 Similarly, in the 'VALID' padding scheme which we do not add any zero
 padding to the input, the size of the output would be
 
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/b2f55c1bf9b695e142ce6c0cfc5489c0.svg?invert_in_darkmode" align=middle width=269.2767pt height=36.09507pt/></p>
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/d48a7a9012404449bb01bf1aa521de32.svg?invert_in_darkmode" align=middle width=269.4186pt height=36.09507pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/b2f55c1bf9b695e142ce6c0cfc5489c0.svg?invert_in_darkmode" align=middle width=269.2767pt height=36.09507pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/d48a7a9012404449bb01bf1aa521de32.svg?invert_in_darkmode" align=middle width=269.4186pt height=36.09507pt/></p>
 
 Let's get back to the Convolutional layer. A convolution layer does
 exactly the same: applying a filter on an input in convolutionl manner.
@@ -344,7 +344,7 @@ to the network as a pure convolution is a linear operation in
 Mathematics point of view. One of the most common activation functions
 in the area of deep learning is **RELU** which is defined as:
 
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/f90cc2eae2be613dcd5666264b6272b0.svg?invert_in_darkmode" align=middle width=164.2146pt height=16.438356pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/f90cc2eae2be613dcd5666264b6272b0.svg?invert_in_darkmode" align=middle width=164.2146pt height=16.438356pt/></p>
 
 If you want to add RELU to our latest version of convolutional layer,
 you just need to replace `return output` with
@@ -352,8 +352,6 @@ you just need to replace `return output` with
 
 Good to know 
 ------------
-
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/91622d922ffea5cfcaff1b0b30fd9b1e.svg?invert_in_darkmode" align=middle width=13.206864pt height=13.881252pt/></p>, and <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/2f0c3b6e9153d43aae9e4f1be895635a.svg?invert_in_darkmode" align=middle width=15.366945pt height=22.06347pt/>
 
 Know that you know how a convolutional layer works, it's time to cover
 some usefull details:
@@ -367,7 +365,7 @@ some usefull details:
     and depth of the output, respectively. Note that the one inside the
     parenthesis is to count the biases.
 
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/38cb4271050f99f4f846a00910dde404.svg?invert_in_darkmode" align=middle width=350.88075pt height=16.438356pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/None/svgs/38cb4271050f99f4f846a00910dde404.svg?invert_in_darkmode" align=middle width=350.88075pt height=16.438356pt/></p>
 
 -   **Locally-Connected Layer:** This type of layer is quite the same as
     the Convolutional layer explained in this post but with only one

@@ -354,8 +354,6 @@ you just need to replace `return output` with
 Good to know 
 ------------
 
-$$d_i $$, and $d_o$
-
 Know that you know how a convolutional layer works, it's time to cover
 some usefull details:
 
