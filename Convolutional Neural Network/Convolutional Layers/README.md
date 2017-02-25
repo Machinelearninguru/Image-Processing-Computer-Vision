@@ -344,7 +344,6 @@ Mathematics point of view. One of the most common activation functions
 in the area of deep learning is **RELU** which is defined as:
 
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/f90cc2eae2be613dcd5666264b6272b0.svg?invert_in_darkmode" align=middle width=164.2146pt height=16.438356pt/></p>
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/f90cc2eae2be613dcd5666264b6272b0.svg?invert_in_darkmode" align=middle width=164.2146pt height=16.438356pt/></p>
 
 If you want to add RELU to our latest version of convolutional layer,
 you just need to replace `return output` with
