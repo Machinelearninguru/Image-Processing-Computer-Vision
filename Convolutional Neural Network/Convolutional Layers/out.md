@@ -72,8 +72,8 @@ required padding in each side:
 Similarly, in the 'VALID' padding scheme which we do not add any zero
 padding to the input, the size of the output would be
 
-text{output height} = ceil(\\dfrac{H-F\_h+1}{S\_h})
-text{output width} = ceil(\\dfrac{W-F\_w+1}{S\_w})
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/92b66fad8d2f24f5931a2dd9aa07b1d7.svg?invert_in_darkmode" align=middle width=340.21185pt height=16.438356pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/077eda74d300a4c8c1020df8ff7d304d.svg?invert_in_darkmode" align=middle width=343.70985pt height=16.438356pt/></p>
 
 Let's get back to the Convolutional layer. A convolution layer does
 exactly the same: applying a filter on an input in convolutionl manner.
@@ -363,13 +363,12 @@ some usefull details:
     is good to know how many parameters your convolutional layer would
     add up to your network. What you train in a convolutional layer are
     its filters and biases. Then, you can easily calculate its number of
-    parameters using the following equation:
+    parameters using the following equation where $d\_i$, and $d\_o$ are depth (\# of channels) of the input
+    and depth of the output, respectively. Note that the one inside the
+    parenthesis is to count the biases.
 
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/38cb4271050f99f4f846a00910dde404.svg?invert_in_darkmode" align=middle width=350.88075pt height=16.438356pt/></p>
 
-    where $d\_i$, and $d\_o$ are depth (\# of channels) of the input
-    and depth of the output, respectively. Note that the one inside the
-    parenthesis is to count the biases.
 -   **Locally-Connected Layer:** This type of layer is quite the same as
     the Convolutional layer explained in this post but with only one
     (important) difference. In the Convolutional layer the filter was
