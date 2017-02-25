@@ -42,8 +42,8 @@ convolution output for an input with the size of (width = <img src="https://rawg
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/1007d29ec0d1c66f578ea22be4689b30.svg?invert_in_darkmode" align=middle width=249.40905pt height=36.09507pt/></p>
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/4bc21c1e2ef5ec53ed371edf9a9fab1f.svg?invert_in_darkmode" align=middle width=247.67325pt height=36.09507pt/></p>
 
-where $s_w$ and $s_h$ are horizontal and vertical stride of the
-convolution, respectively, and $P$ is the amount of zero padding added
+where <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/9b9b57cc812f2598082fbae95c2eb73d.svg?invert_in_darkmode" align=middle width=17.84706pt height=13.38744pt/> and <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/830b6bb7e31ccb49ce56184a3eca880b.svg?invert_in_darkmode" align=middle width=15.72384pt height=13.38744pt/> are horizontal and vertical stride of the
+convolution, respectively, and <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/df5a289587a2f0247a5b97c1e8ac58ca.svg?invert_in_darkmode" align=middle width=13.15908pt height=21.69783pt/> is the amount of zero padding added
 to the border of the image (Look at the [previous post]() if you are not
 familiar with the zero padding concept). However, the output width or
 height calculated from these equations might be a non-integer value. In

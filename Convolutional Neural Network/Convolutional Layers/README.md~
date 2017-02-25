@@ -42,8 +42,8 @@ convolution output for an input with the size of (width = <img src="https://rawg
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/1007d29ec0d1c66f578ea22be4689b30.svg?invert_in_darkmode" align=middle width=249.40905pt height=36.09507pt/></p>
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/4bc21c1e2ef5ec53ed371edf9a9fab1f.svg?invert_in_darkmode" align=middle width=247.67325pt height=36.09507pt/></p>
 
-where \$s\_w\$ and \$s\_h\$ are horizontal and vertical stride of the
-convolution, respectively, and \$P\$ is the amount of zero padding added
+where $s_w$ and $s_h$ are horizontal and vertical stride of the
+convolution, respectively, and $P$ is the amount of zero padding added
 to the border of the image (Look at the [previous post]() if you are not
 familiar with the zero padding concept). However, the output width or
 height calculated from these equations might be a non-integer value. In
