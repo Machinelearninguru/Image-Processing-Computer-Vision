@@ -54,7 +54,8 @@ scheme which determine the output size, namely **'SAME'** and
 **'VALID'** padding schemes. In 'SAME' padding scheme, in which we have
 zero padding, the size of output will be
 
-$$\text{output height} = ceil(\dfrac{H}{S_h}) \qquad \qquad \text{output width}  = ceil(\dfrac{W}{S_w})$$
+$$\text{output height} = ceil(\dfrac{H}{S_h}) \qquad \qquad
+\text{output width}  = ceil(\dfrac{W}{S_w})$$
 
 If the required number of pixels for padding to have the desired output
 size is a even number, we can simply add half of that to each side of
@@ -72,8 +73,8 @@ $$\text{padding bottom} = P_h - P_t \qquad \qquad \text{padding right} = P_w - P
 Similarly, in the 'VALID' padding scheme which we do not add any zero
 padding to the input, the size of the output would be
 
-$$text{output height} = ceil(\dfrac{H-F_h+1}{S_h})$$
-$$text{output width} = ceil(\dfrac{W-F_w+1}{S_w})$$
+$$\text{output height} = ceil(\dfrac{H-F_h+1}{S_h}) \qquad \qquad
+\text{output width}  = ceil(\dfrac{W-F_w+1}{S_w})$$
 
 Let's get back to the Convolutional layer. A convolution layer does
 exactly the same: applying a filter on an input in convolutionl manner.
