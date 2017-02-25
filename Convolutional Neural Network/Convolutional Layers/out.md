@@ -54,7 +54,7 @@ scheme which determine the output size, namely **'SAME'** and
 **'VALID'** padding schemes. In 'SAME' padding scheme, in which we have
 zero padding, the size of output will be
 
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/7281ba59279296e2b5148cc2b893b6d9.svg?invert_in_darkmode" align=middle width=426.8385pt height=36.09507pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/ac688fd45dd06716af55c84d04d76f51.svg?invert_in_darkmode" align=middle width=426.8385pt height=36.09507pt/></p>
 
 If the required number of pixels for padding to have the desired output
 size is a even number, we can simply add half of that to each side of
