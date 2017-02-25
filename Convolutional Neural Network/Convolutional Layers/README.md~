@@ -73,8 +73,8 @@ $$\text{padding bottom} = P_h - P_t \qquad \qquad \text{padding right} = P_w - P
 Similarly, in the 'VALID' padding scheme which we do not add any zero
 padding to the input, the size of the output would be
 
-text{output height} = ceil(\\dfrac{H-F\_h+1}{S\_h})
-text{output width} = ceil(\\dfrac{W-F\_w+1}{S\_w})
+$$text{output height} = ceil(\dfrac{H-F_h+1}{S_h})$$
+$$text{output width} = ceil(\dfrac{W-F_w+1}{S_w})$$
 
 Let's get back to the Convolutional layer. A convolution layer does
 exactly the same: applying a filter on an input in convolutionl manner.
@@ -364,13 +364,12 @@ some usefull details:
     is good to know how many parameters your convolutional layer would
     add up to your network. What you train in a convolutional layer are
     its filters and biases. Then, you can easily calculate its number of
-    parameters using the following equation:
+    parameters using the following equation where $d\_i$, and $d\_o$ are depth (\# of channels) of the input
+    and depth of the output, respectively. Note that the one inside the
+    parenthesis is to count the biases.
 
 $$\text{number of parameters} = (F_w \times F_h \times d_i + 1) \times d_o$$
 
-    where $d\_i$, and $d\_o$ are depth (\# of channels) of the input
-    and depth of the output, respectively. Note that the one inside the
-    parenthesis is to count the biases.
 -   **Locally-Connected Layer:** This type of layer is quite the same as
     the Convolutional layer explained in this post but with only one
     (important) difference. In the Convolutional layer the filter was

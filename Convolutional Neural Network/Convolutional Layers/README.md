@@ -73,8 +73,8 @@ $$\text{padding bottom} = P_h - P_t \qquad \qquad \text{padding right} = P_w - P
 Similarly, in the 'VALID' padding scheme which we do not add any zero
 padding to the input, the size of the output would be
 
-$$text{output height} = ceil(\\dfrac{H-F\_h+1}{S\_h})$$
-$$text{output width} = ceil(\\dfrac{W-F\_w+1}{S\_w})$$
+$$text{output height} = ceil(\dfrac{H-F_h+1}{S_h})$$
+$$text{output width} = ceil(\dfrac{W-F_w+1}{S_w})$$
 
 Let's get back to the Convolutional layer. A convolution layer does
 exactly the same: applying a filter on an input in convolutionl manner.
@@ -354,7 +354,7 @@ you just need to replace `return output` with
 Good to know 
 ------------
 
-$d_i$, and $d_o$
+$$d_i $$, and $d_o$
 
 Know that you know how a convolutional layer works, it's time to cover
 some usefull details:

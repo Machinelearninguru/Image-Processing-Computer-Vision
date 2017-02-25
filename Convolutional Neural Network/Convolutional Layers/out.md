@@ -72,8 +72,8 @@ required padding in each side:
 Similarly, in the 'VALID' padding scheme which we do not add any zero
 padding to the input, the size of the output would be
 
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/92b66fad8d2f24f5931a2dd9aa07b1d7.svg?invert_in_darkmode" align=middle width=340.21185pt height=16.438356pt/></p>
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/077eda74d300a4c8c1020df8ff7d304d.svg?invert_in_darkmode" align=middle width=343.70985pt height=16.438356pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/b2f55c1bf9b695e142ce6c0cfc5489c0.svg?invert_in_darkmode" align=middle width=269.2767pt height=36.09507pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/d48a7a9012404449bb01bf1aa521de32.svg?invert_in_darkmode" align=middle width=269.4186pt height=36.09507pt/></p>
 
 Let's get back to the Convolutional layer. A convolution layer does
 exactly the same: applying a filter on an input in convolutionl manner.
@@ -353,7 +353,7 @@ you just need to replace `return output` with
 Good to know 
 ------------
 
-<img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/672a7aeac9254219b9609330a12e55e5.svg?invert_in_darkmode" align=middle width=13.529175pt height=22.06347pt/>, and <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/2f0c3b6e9153d43aae9e4f1be895635a.svg?invert_in_darkmode" align=middle width=15.366945pt height=22.06347pt/>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/91622d922ffea5cfcaff1b0b30fd9b1e.svg?invert_in_darkmode" align=middle width=13.206864pt height=13.881252pt/></p>, and <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/2f0c3b6e9153d43aae9e4f1be895635a.svg?invert_in_darkmode" align=middle width=15.366945pt height=22.06347pt/>
 
 Know that you know how a convolutional layer works, it's time to cover
 some usefull details:
