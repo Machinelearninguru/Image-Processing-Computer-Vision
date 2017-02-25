@@ -42,8 +42,8 @@ convolution output for an input with the size of (width = <img src="https://rawg
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/1007d29ec0d1c66f578ea22be4689b30.svg?invert_in_darkmode" align=middle width=249.40905pt height=36.09507pt/></p>
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/4bc21c1e2ef5ec53ed371edf9a9fab1f.svg?invert_in_darkmode" align=middle width=247.67325pt height=36.09507pt/></p>
 
-where \$s\_w\$ and \$s\_h\$ are horizontal and vertical stride of the
-convolution, respectively, and \$P\$ is the amount of zero padding added
+where $s_w$ and $s_h$ are horizontal and vertical stride of the
+convolution, respectively, and $P$ is the amount of zero padding added
 to the border of the image (Look at the [previous post]() if you are not
 familiar with the zero padding concept). However, the output width or
 height calculated from these equations might be a non-integer value. In
@@ -368,7 +368,7 @@ some usefull details:
 <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/32a586c45cf0f3120e5ebb68915ec6f0.svg?invert_in_darkmode" align=middle width=351.2025pt height=23.88969pt/>
 
 
-    where $d_i$, and $d_o$ are depth (\# of channels) of the input
+    where $d\_i$, and $d\_o$ are depth (\# of channels) of the input
     and depth of the output, respectively. Note that the one inside the
     parenthesis is to count the biases.
 -   **Locally-Connected Layer:** This type of layer is quite the same as
