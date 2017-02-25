@@ -1,57 +1,3 @@
----
-title: |
-    Undrestanding Convolutional Layers in Convolutional Neural Networks
-    (CNNs)
-viewport: 'width=device-width, initial-scale=1'
----
-
-<div id="page-wrapper">
-
-<div id="header">
-
--   [Home](../../../index.php)
--   [&gt;](#)
--   [Image Processing & Computer Vision](../../../topics.php?my_id=1)
--   [&gt;](#)
--   [Basics](../../../posts.php?my_id=6)
-
-</div>
-
-<div class="section wrapper style1">
-
-<div class="container">
-
-<div class="row 200%">
-
-<div class="4u 12u(narrower)">
-
-<div id="sidebar">
-
-<div class="section">
-
-### ![](../../../_images/logo2.png) [Machine Learning Guru](../../../index.php){#logo}
-
-Machine Learning and Computer Vision tutorials using open source
-packages.
-
-</div>
-
-<div class="section">
-
-### Sections
-
--   [Introduction](#intro)
--   [Good to know](#terms)
-
-</div>
-
-</div>
-
-</div>
-
-<div class="8u 12u(narrower) important(narrower)">
-
-<div id="content">
 
 Undrestanding Convolutional Layers in Convolutional Neural Networks (CNNs)
 --------------------------------------------------------------------------
@@ -84,27 +30,8 @@ convolution with stride 2, we calculate the output for every other pixel
 be roughly half the size of the input image. Figure 1 compares two 2D
 convolutions with strides one and two, respectively.
 
-<div align="center">
-
-<div class="responsive" style="padding: 0 6px;width: 80%;">
-
-<div class="img">
-
-[![](../../../_images/topics/computer_vision/basics/convolutional_layer_1/stride1.gif){width="600"
-height="400"}](../../../_images/topics/computer_vision/basics/convolutional_layer_1/stride1.gif)
-[![](../../../_images/topics/computer_vision/basics/convolutional_layer_1/stride2.gif){width="600"
-height="400"}](../../../_images/topics/computer_vision/basics/convolutional_layer_1/stride2.gif)
-<div class="desc">
-
-**Figure 1:** The effect of stride in convolution calculation
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+![fig1](_images/stride1.gif  "Figure 1:** The effect of stride in convolution calculation")
+![fig1](_images/stride2.gif  "Figure 1:** The effect of stride in convolution calculation")
 
 Note that ,you can have different strides horizontally and vertically.
 You can use the following equations to calculate the exact size of the
@@ -552,55 +479,3 @@ some usefull details:
 **What Next?** In the next post we will get more familiar with
 backpropagation and how to train a convolutional neural network.
 
-\
-[Go Top](#post_top)\
-\
-<div id="disqus_thread">
-
-</div>
-
-Please enable JavaScript to view the [comments powered by
-Disqus.](https://disqus.com/?ref_noscript)
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div id="footer">
-
-<div class="container">
-
-<div class="row">
-
-<div class="section 3u 6u(narrower) 12u$(mobilep)">
-
-### Related Posts:
-
--   [[Twitter]{.label}](https://twitter.com/M_L_Guru){.icon .fa-twitter}
--   [[GitHub]{.label}](https://github.com/Machinelearninguru){.icon
-    .fa-github}
--   [[LinkedIn]{.label}](https://www.linkedin.com/groups/12030461){.icon
-    .fa-linkedin}
-
-<div class="copyright">
-
--   © Machine Learning Guru. All rights reserved
--   Design: [HTML5 UP](http://html5up.net)
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
