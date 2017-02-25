@@ -54,7 +54,7 @@ scheme which determine the output size, namely **'SAME'** and
 **'VALID'** padding schemes. In 'SAME' padding scheme, in which we have
 zero padding, the size of output will be
 
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/ac688fd45dd06716af55c84d04d76f51.svg?invert_in_darkmode" align=middle width=426.8385pt height=36.09507pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/7281ba59279296e2b5148cc2b893b6d9.svg?invert_in_darkmode" align=middle width=426.8385pt height=36.09507pt/></p>
 
 If the required number of pixels for padding to have the desired output
 size is a even number, we can simply add half of that to each side of
@@ -72,8 +72,7 @@ required padding in each side:
 Similarly, in the 'VALID' padding scheme which we do not add any zero
 padding to the input, the size of the output would be
 
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/b2f55c1bf9b695e142ce6c0cfc5489c0.svg?invert_in_darkmode" align=middle width=269.2767pt height=36.09507pt/></p>
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/d48a7a9012404449bb01bf1aa521de32.svg?invert_in_darkmode" align=middle width=269.4186pt height=36.09507pt/></p>
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/4c011d601ffc424c9759e62ee49cdd29.svg?invert_in_darkmode" align=middle width=557.4327pt height=36.09507pt/></p>
 
 Let's get back to the Convolutional layer. A convolution layer does
 exactly the same: applying a filter on an input in convolutionl manner.
