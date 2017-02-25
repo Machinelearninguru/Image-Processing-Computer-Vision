@@ -351,15 +351,11 @@ to the network as a pure convolution is a linear operation in
 Mathematics point of view. One of the most common activation functions
 in the area of deep learning is **RELU** which is defined as:
 
-<div id="pycode" class="panel-body">
-
-RELU(x) = max(x, 0)
+<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/105feb881e0c5bf2b596093a4b0dff5f.svg?invert_in_darkmode" align=middle width=164.2146pt height=16.438356pt/></p>
 
 If you want to add RELU to our latest version of convolutional layer,
 you just need to replace `return output` with
 `return np.maximum(output, 0)`
-
-![equation](http://latex.codecogs.com/gif.latex?Concentration%3D%5Cfrac%7BTotalTemplate%7D%7BTotalVolume%7D) 
 
 Good to know 
 ------------
@@ -374,11 +370,10 @@ some usefull details:
     its filters and biases. Then, you can easily calculate its number of
     parameters using the following equation:
 
-    \$\\text{number of parameters} = (F\_w \\times F\_h \\times d\_i +
-    1) \\times d\_o\$
+    $$\text{number of parameters} = (F_w \times F_h \times d_i + 1) \times d_o$$
 
 
-    where \$d\_i\$, and \$d\_o\$ are depth (\# of channels) of the input
+    where $d_i$, and $d_o$ are depth (\# of channels) of the input
     and depth of the output, respectively. Note that the one inside the
     parenthesis is to count the biases.
 -   **Locally-Connected Layer:** This type of layer is quite the same as
@@ -410,4 +405,3 @@ some usefull details:
 
 **What Next?** In the next post we will get more familiar with
 backpropagation and how to train a convolutional neural network.
-
