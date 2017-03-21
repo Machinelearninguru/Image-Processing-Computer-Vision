@@ -364,7 +364,7 @@ some usefull details:
     and depth of the output, respectively. Note that the one inside the
     parenthesis is to count the biases.
 
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/38cb4271050f99f4f846a00910dde404.svg?invert_in_darkmode" align=middle width=350.88075pt height=16.438356pt/></p>
+<p align="center"><img src="svgs/38cb4271050f99f4f846a00910dde404.svg.png" align=middle width=350.88075pt height=16.438356pt/></p>
 
 -   **Locally-Connected Layer:** This type of layer is quite the same as
     the Convolutional layer explained in this post but with only one
