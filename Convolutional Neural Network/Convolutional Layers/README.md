@@ -64,7 +64,7 @@ of the input (for horizontal padding) or the top and the bottom sides of
 the input (for vertical padding). Here is how Tensorflow calculates
 required padding in each side:
 
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/8306be941129dcf27d8b09ef447e398d.svg?invert_in_darkmode" align=middle width=521.62605pt height=16.438356pt/></p>
+<p align="center"><img src="svgs/8306be941129dcf27d8b09ef447e398d.svg?invert_in_darkmode" align=middle width=521.62605pt height=16.438356pt/></p>
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/d60118b3946920a43247967f9eaf3b2f.svg?invert_in_darkmode" align=middle width=522.58635pt height=16.438356pt/></p>
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/b5cce0ee4b88deabb525e7ff72f1d868.svg?invert_in_darkmode" align=middle width=515.9352pt height=33.629475pt/></p>
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/8195c3020edae6015bd8f1d340aa8a67.svg?invert_in_darkmode" align=middle width=433.98795pt height=14.611872pt/></p>
