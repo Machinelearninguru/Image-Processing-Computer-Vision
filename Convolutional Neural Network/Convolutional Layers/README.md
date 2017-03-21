@@ -35,8 +35,8 @@ convolutions with strides one and two, respectively.
 
 Note that ,you can have different strides horizontally and vertically.
 You can use the following equations to calculate the exact size of the
-convolution output for an input with the size of (width = <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/84c95f91a742c9ceb460a83f9b5090bf.svg?invert_in_darkmode" align=middle width=18.13053pt height=21.69783pt/>, height
-= <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/7b9a0316a2fcd7f01cfd556eedf72e96.svg?invert_in_darkmode" align=middle width=15.32223pt height=21.69783pt/>) and a Filter with the size of (width = <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/a6f127b4375ffe34a939afe6f6d88a07.svg?invert_in_darkmode" align=middle width=20.71245pt height=21.69783pt/>, height =
+convolution output for an input with the size of (width = <img src="svgs/84c95f91a742c9ceb460a83f9b5090bf.svg.png" align=middle width=18.13053pt height=21.69783pt/>, height
+= <img src="svgs/7b9a0316a2fcd7f01cfd556eedf72e96.svg.png" align=middle width=15.32223pt height=21.69783pt/>) and a Filter with the size of (width = <img src="svgs/a6f127b4375ffe34a939afe6f6d88a07.svg.png" align=middle width=20.71245pt height=21.69783pt/>, height =
 <img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/1ab079395027c7fee523b46ac98a4e9a.svg?invert_in_darkmode" align=middle width=18.589065pt height=21.69783pt/>):
 
 <p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/1007d29ec0d1c66f578ea22be4689b30.svg?invert_in_darkmode" align=middle width=249.40905pt height=36.09507pt/></p>
@@ -64,10 +64,10 @@ of the input (for horizontal padding) or the top and the bottom sides of
 the input (for vertical padding). Here is how Tensorflow calculates
 required padding in each side:
 
-<p align="center"><img src="svgs/8306be941129dcf27d8b09ef447e398d.svg" align=middle width=521.62605pt height=16.438356pt/></p>
-<p align="center"><img src="svgs/d60118b3946920a43247967f9eaf3b2f.svg" align=middle width=522.58635pt height=16.438356pt/></p>
-<p align="center"><img src="svgs/b5cce0ee4b88deabb525e7ff72f1d868.svg" align=middle width=515.9352pt height=33.629475pt/></p>
-<p align="center"><img src="https://rawgit.com/Machinelearninguru/Image-Processing-Computer-Vision/master/svgs/8195c3020edae6015bd8f1d340aa8a67.svg?invert_in_darkmode" align=middle width=433.98795pt height=14.611872pt/></p>
+<p align="center"><img src="svgs/8306be941129dcf27d8b09ef447e398d.svg.png" align=middle width=521.62605pt height=16.438356pt/></p>
+<p align="center"><img src="svgs/d60118b3946920a43247967f9eaf3b2f.svg.png" align=middle width=522.58635pt height=16.438356pt/></p>
+<p align="center"><img src="svgs/b5cce0ee4b88deabb525e7ff72f1d868.svg.png" align=middle width=515.9352pt height=33.629475pt/></p>
+<p align="center"><img src="svgs/8195c3020edae6015bd8f1d340aa8a67.svg.png" align=middle width=433.98795pt height=14.611872pt/></p>
 
 Similarly, in the 'VALID' padding scheme which we do not add any zero
 padding to the input, the size of the output would be
