@@ -137,8 +137,6 @@ codec. More details can be found at [FFmpeg Filters
 Documentation](http://ffmpeg.org/ffmpeg-filters.html). The fllowing
 Table, summarize the indicators:
 
-
-***Table 1***
 =======
 | Attribute | Description | option | Description  |
 | :-------------: | :-------------: | :-----: | :-----: |
