@@ -138,7 +138,6 @@ Documentation](http://ffmpeg.org/ffmpeg-filters.html). The fllowing
 Table, summarize the indicators:
 
 
-<center>
 **Table 1**
 =======
 | Attribute | Description | option | Description  |
@@ -150,7 +149,6 @@ Table, summarize the indicators:
 |  -b:v      |  set the video bitrate | 5M |   Set to 5M  |
 |  -acodec   |  set the audio codec   | copy |   only copied and no encoding  |
 
-</center>
 
 
 The `-vf` is the main command which its full
