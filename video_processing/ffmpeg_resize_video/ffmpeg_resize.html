@@ -1,0 +1,395 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<link href="../../../syntaxhighlighter_3.0.83/styles/shCore.css" rel="stylesheet" type="text/css" />
+<link href="../../../syntaxhighlighter_3.0.83/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+<link href="../../../assets/css/shell.css" rel="stylesheet" type="text/css" />
+<link href="../../../assets/css/table.css" rel="stylesheet" type="text/css" />
+
+
+<head>
+
+
+    <link rel="icon" type="image/png" href="../../../_images/logo1.png">
+    <title>Resize of Video using FFMPEG With NVIDIA GPU Acceleration on Ubuntu</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../../assets/Resources/elighterjs/Resources/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../assets/css/main.css" />
+    <link rel="stylesheet" href="../../../assets/css/figure_style.css" />
+    <link rel="stylesheet" href="../../../assets/css/text_style.css" />
+    <!-- Favicon !-->
+    <link rel="stylesheet" type="text/css" href="../../../assets/Resources/elighterjs/Build/EnlighterJS.min.css" />
+    <script type="text/javascript" src="../../../assets/Resources/elighterjs/Resources/MooTools.min.js"></script>
+    <script type="text/javascript" src="../../../assets/Resources/elighterjs/Build/EnlighterJS.min.js"></script>
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} }); </script>
+    <script type="text/javascript">
+        window.addEvent('domready', function() {
+            EnlighterJS.Util.Helper(document.getElements('#pycode pre'), {
+                indent: 4,
+                language: 'python',
+                renderer: 'Block',
+                grouping: true,
+                theme: 'Beyond',
+                showLinenumbers: true
+            });
+            EnlighterJS.Util.Helper(document.getElements('#pycode code.ih'), {
+                renderer: 'Inline',
+                language: 'python',
+                theme: 'Beyond'
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <div id="header">
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="../../../index.php">Home</a></li>
+                    <li><a href="#">></a></li>
+                    <li><a href="../../../topics.php?my_id=1">Image Processing & Computer Vision</a></li>
+                    <li><a href="#">></a></li>
+                    <li><a href="../../../posts.php?my_id=7">Video Processing</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <!-- Main -->
+        <section class="wrapper style1">
+            <div class="container">
+                <div class="row 200%">
+                    <div class="4u 12u(narrower)">
+                        <div id="sidebar">
+                            <!-- Sidebar -->
+                            <section>
+                                <h3><img src="../../../_images/logo2.png" style="width:64px;height:64px;vertical-align: middle;" alt="" />&emsp;<a id="logo" style="vertical-align: middle;" href="../../../index.html">Machine Learning Guru</a></h3>
+                                <p>Machine Learning and Computer Vision tutorials using open source packages.</p>
+                            </section>
+                            <section>
+                                <h3>Sections</h3>
+                                <ul class="links">
+                                    <li><a href="#intro">Introduction</a></li>
+                                    <li><a href="#DataIndicator">Data Indicator</a></li>
+                                    <li><a href="#Video Resize">Video Resize</a></li>
+                                    <li><a href="#Code Execution">Code Execution</a></li>
+                                    <li><a href="#Working in Bash Shell">Working in Bash Shell</a></li>
+                                    <li><a href="#Summary">Summary</a></li>
+
+
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="8u  12u(narrower) important(narrower)">
+                        <div id="content">
+                            <!--    #######################             -->
+                            <!--    #######################             -->
+                            <!--    Content: Your post starts here      -->
+                            <!--    #######################             -->
+                            <!--    #######################             -->
+                            <article id="post_top">
+                                <header align="center">
+                                    <h2>Resize a Video using FFMPEG With NVIDIA GPU Acceleration on Ubuntu</h2>
+                                    <p>This tutorial deals with video resizing using GPU accelerated libraries supported by FFMPEG in Ubuntu 16.04.</p>
+                                </header>
+                                <!--    #######################  ####################### ####################### #######################            -->
+                                <!--    #######################  ####################### ####################### #######################            -->
+                                <!--    #######################  ####################### ####################### #######################            -->
+                                <!--    #######################  ####################### ####################### #######################            -->
+                                <h2 id="intro">Introduction</h2>
+                                <p align="justify"><b>FFmpeg</b> is one of the most famous multimedia frameworks wich is widely used for processing videos. In order to encode the video, certainly a video encoder must be used. The popular <span class="inner_shadow">x264</span> is the one which is widely used however it is not super fast! The latest <span class="inner_shadow">NVIDIA GPUs</span> contain a hardware-based video encoder called <span class="inner_shadow">NVENC</span> which is much faster than traditional ones. In order to be able to utilize this gpu-accelerated encoder, FFmpeg must be installed with NVENC support. The full documentation of
+                                    FFmpeg integrated with NVIDIA can be fount at <a href="https://developer.nvidia.com/ffmpeg">here</a>. documentation on NVENC can be found <a href="https://developer.nvidia.com/nvidia-video-codec-sdk#NVENCFeatures">here</a>.
+                                    Moreover The NVENC programming guide can be found <a href="https://developer.nvidia.com/nvidia-video-codec-sdk#NVENCFeatures">here</a>.
+
+                                </p>
+                                <p align="justify">In this tutorial the main goal is to show how to do resize a video with GPU-accelerated libraries in Linux. In this tutorial we do not use the terminal commands directly for employing the FFmpeg with NVENC support. Instead
+                                    the python interface is being used to run commands in the terminal. This can be done using <span class="inner_shadow">subprocess</span> python module. This module is employed for execution and dealing external commands,
+                                    intended to supersede the <span class="inner_shadow">os.sys</span> module. The trivial method os its usage will be explained in this tutorial. Please refer to <a href="https://docs.python.org/2/library/subprocess.html">this documentation</a>                                    for further details.</p>
+
+                                <p align="justify">The assumption of this tutorial is that the FFmpeg is already installed with NVENC support. The installation guide can be found in <a href="http://developer.download.nvidia.com/compute/redist/ffmpeg/1511-patch/FFMPEG-with-NVIDIA-Acceleration-on-Ubuntu_UG_v01.pdf">FFMPEG WITH NVIDIA
+                                    ACCELERATION ON UBUNTU LINUX</a> documentation provided by NVIDIA.</p>
+
+                                <h2 id="DataIndicator">Data Indicator</h2> This tutorial is customized for processing multiple videos. The assumption is that the full path of each video is stored in a <span class="inner_shadow">.txt</span> file in line-by-line format. The example of the ".txt"
+                                file is as below:
+                                <div align="center">
+                                    <div id="figure1" class="responsive" style="padding: 0 6px;width: 80%;">
+                                        <div class="img">
+                                            <a target="_blank" href="../../../_images/topics/computer_vision/video_processing/ffmpeg_rotate_video/txtfileformat.png"> <img src="../../../_images/topics/computer_vision/video_processing/ffmpeg_rotate_video/txtfileformat.png" alt="Linkedin" width="600" height="400"> </a>
+                                            <div class="desc"> <b>Figure 1:</b> The format of .txt file.</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                As a guidance if a recursive search for specific files in a directory and its subdirectories with extension <span class="inner_shadow">".mov"</span> is desired, the following method in command line is useful and it saves
+                                the output as a ".txt" file:
+                                <div class="shell-wrap" style="width: 800px">
+                                    <p class="shell-top-bar">Search for Specific Files</p>
+                                    <ul class="shell-body">
+                                        <li>find /absolute/path/to/directory/to/be/search -type f -name "*.mov" > /absolute/path/to/save/the/output/textfile.txt</li>
+                                    </ul>
+                                </div>
+
+                                <h2 id="Video Resize">Video Resize</h2> From now on the assumption is that the ".txt" file is ready and well-formatted. The python script for processing videos is as below:
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">Resizing a video using FFmpeg with NVENC encoder</div>
+                                    <div class="panel-body" id="pycode">
+                                        <pre data-enlighter-group="code3" data-enlighter-title="video custome resize">
+ 
+import subprocess
+import os
+import sys
+
+# Pre...
+textfile_path = 'videos.txt'
+output_dir_base = 'PATH/TO/OUTPUT'
+# Read the text file
+with open(textfile_path) as f:
+    content = f.readlines()
+# you may also want to remove whitespace characters like `\n` at the end of each line
+files_list = [x.strip() for x in content]
+
+# Transpose 90 degree & Clockwise
+# It already save the video file using the named defined by output_name.
+for file_num, file_path_input in enumerate(files_list, start=1):
+    # Get the file name without extension
+    file_name = os.path.basename(file_path_input)
+    ID = file_name.split('_')[1]
+    raw_file_name = os.path.basename(file_name).split('.')[0]
+    file_dir_input = os.path.dirname(file_path_input)
+    file_dir_output = output_dir_base + '/' + ID
+    if not os.path.exists(file_dir_output):
+        os.makedirs(file_dir_output)
+    file_path_output = file_dir_output + '/' + raw_file_name + '.mkv'
+    print('processing file: %s' % file_path_input)
+
+    subprocess.call(
+        ['ffmpeg', '-y', '-i', file_path_input, '-filter_complex', 
+        'nvresize=1:s=540x960:readback=0[out0]', '-map', '[out0]',
+         '-acodec', 'copy', '-r', '30', '-vcodec', 'nvenc', '-b:v', '3M', file_path_output])
+print('file %s saved' % file_path_output)
+</pre>
+                                        
+                                    </div>
+                                </div>
+
+                                <h3 id="Overall Code Description "> I - Overall Code Description</h3> The <span class="inner_shadow">videos.txt</span> file is saved in the absolute path. <b>Lines 8-12</b> of the code reads the ".txt" file and stores each line as an item of a list called
+                                <span class="inner_shadow">files_list</span>. The loop starts at <b>line 16</b> process each file with the <span class="inner_shadow">subprocess.call</span> command. In each loop the folder of the input file is found and
+                                the output file will be stored in the same directory but with different naming convention which is explained by the comments in the code. Each <span class="inner_shadow">,</span> in the <span class="inner_shadow"> subprocess.call</span>                                command in the python is correspondent to <span class="inner_shadow">an empty space</span> in the terminal. As an example the correspondent shell command is as below:
+                                <div class="shell-wrap" style="width: 800px">
+                                    <p class="shell-top-bar">Build Essentials</p>
+                                    <ul class="shell-body">
+                                        <li>ffmpeg -i file_path -filter:v transpose=-1 -vcodec nvenc -preset slow -b:v 5M -acodec copy output_file_path </li>
+                                    </ul>
+                                </div>
+
+                                <h3 id="FFmpegdescription"> II - FFmpeg Encoder</h3> The command executed by <b>FFmpeg</b> needs to be described. Each of the elements started by <span class="inner_shadow">-</span> are calling specific operations and the command follows by them execute the desired operation.
+                                For example <span class="inner_shadow">-vcodec</span> indicator will specify the <b>codec</b> to be used by <b>FFmpeg</b> and <b>nvenc</b> which follows by that point to the codec. More details can be found at <a href="http://ffmpeg.org/ffmpeg-filters.html">FFmpeg Filters Documentation</a>. The following Table, summarize the indicators:
+
+
+                                <div id="page-wrap">
+
+                                <h1 align='center'>Table 1</h1>
+
+
+                                <table class='table'>
+				<tbody>
+                                  <tr>
+                                    <th class='thh'>Attribute</th>
+                                    <th class='thh'>Description</th>
+                                    <th class='thh'>Argument</th>
+                                    <th class='thh'>Description</th>
+                                  </tr>
+                                  <tr>
+                                    <td>-i</td>
+                                    <td>input argument</td>
+                                    <td>file_path_input</td>
+                                    <td>path to the input file</td>
+                                  </tr>
+                                  <tr>
+                                    <td>-filter_complex</td>
+                                    <td>Multiple resize option</td>
+                                    <td>nvresize=1:s=540x960</td>
+                                    <td>custom size of 540x960 </td>
+                                  </tr>
+                                  <tr>
+                                    <td>-acodec</td>
+                                    <td>Set the audio codec</td>
+                                    <td>copy</td>
+                                    <td>get the audio stream as is</td>
+                                  </tr>
+                                  <tr>
+                                    <td>-vcodec</td>
+                                    <td>Set the video codec</td>
+                                    <td>nvenc</td>
+                                    <td>Nvidia GPU accelerated library</td>
+                                  </tr>
+                                  <tr>
+                                    <td>-r</td>
+                                    <td>video frame rate</td>
+                                    <td>30</td>
+                                    <td>output rate is 30 f/s</td>
+
+                                  </tr>
+                                  <tr>
+                                    <td>-b:v</td>
+                                    <td>set the video bitrate</td>
+                                    <td>3M</td>
+                                    <td>Set to 3M</td>
+
+                                  </tr>
+                                  <tr>
+                                    <td>-acodec</td>
+                                    <td>set the audio codec</td>
+                                    <td>copy</td>
+                                    <td>only copied & no encoding</td>
+
+                                  </tr>
+                                  </tbody>
+                                </table>
+
+                                </div>
+
+                                The <span class="inner_shadow">-vf</span> is the main command which its full documentation is
+                                available at <a href="https://ffmpeg.org/ffmpeg.html#filter_005foption">here</a> and it has the <b>filter options</b>.
+
+
+
+
+
+
+
+                                <h2 id="Code Execution">Code Execution</h2> In order to run the python file we go to the terminal and execute the following:
+                                <div class="shell-wrap" style="width: 800px">
+                                    <p class="shell-top-bar">Build Essentials</p>
+                                    <ul class="shell-body">
+                                        <li>python /absolute/path/to/python/file </li>
+                                    </ul>
+                                </div>
+
+                                As a consideration, if we are working on any specific virtual environment it has to be activated at first.
+                                
+                                <h2 id="Working in Bash Shell">Working in Bash Shell</h2>
+                                
+                                A similar approach can be employed in the terminal too. Running commands in Terminal can be much faster than Python. So it is useful to have and idea of how to do it.
+                                Consider the following commands:
+                                <div class="shell-wrap" style="width: 800px">
+                                    <p class="shell-top-bar">Build Essentials</p>
+                                    <ul class="shell-body">
+                                        <li>for i in **/*.mov; do</li>
+                                        <li>> base=${i%.mov};</li>
+                                        <li>> ffmpeg -y -i file_path_input -filter_complex nvresize=1:s=540x960:readback=0[out0] -map [out0] -acodec copy -r 30 -vcodec nvenc -b:v 3M base=${i%.mkv};</li>
+                                        <li>> done</li>
+                                    </ul>
+                                </div>
+                                
+                                By the assumption that the <span class="inner_shadow">globstar</span> is enabled(in order to make sure about that, the command of <span class="inner_shadow">shopt -s globstar</span> can be executed in the terminal.), the above command find all the files with the <b>".mov"</b> extension in the current directory recursively and after desired processing save them in place with the <b>".mkv"</b> extension. The advantage of globstar is that it is recursive and robust in cases that there is white space in a file or directory name. The command can be altered arbitrary to read the files from a text file and do the processing.
+                                
+
+                                <h2 id="Summary">Summary</h2>
+
+                                This tutorial demonstrated how to process a video and specifically resizing that using <b>FFmpeg</b> and Nvidia GPU accelerated
+                                library called <b>NVENC</b>. The advantage of using python interface is to easily parse the <b>.txt</b> file and looping through
+                                all files. Moreover it enables the user with options which are more complex to be directly employed in the terminal environment.
+
+
+
+
+
+                                <!--    #######################  ####################### ####################### #######################            -->
+                                <!--    #######################  ####################### ####################### #######################            -->
+                                <!--    #######################  ####################### ####################### #######################            -->
+                                <!--    #######################  ####################### ####################### #######################            -->
+
+
+
+
+
+
+
+
+                            </article> <a href="#post_top">Go Top</a>
+                            <!--    #######################  ####################### ####################### #######################            -->
+                            <!--    #######################  ####################### ####################### #######################            -->
+                            <!--    #######################  ####################### ####################### #######################            -->
+                            <!--    #######################  ####################### ####################### #######################            -->
+                            <!--    #######################             -->
+                            <!--             Comments                   -->
+                            <div id="disqus_thread"></div>
+                            <script>
+                                (function() { // DON'T EDIT BELOW THIS LINE
+                                    var d = document,
+                                        s = d.createElement('script');
+                                    s.src = '//machine-learning-guru.disqus.com/embed.js';
+                                    s.setAttribute('data-timestamp', +new Date());
+                                    (d.head || d.body).appendChild(s);
+                                })();
+                            </script>
+                            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <section class="3u 6u(narrower) 12u$(mobilep)">
+                        <h3>Related Posts:</h3>
+                        <!-- <ul class="links">
+                            <li><a href="#">Mattis et quis rutrum</a></li>
+                            <li><a href="#">Suspendisse amet varius</a></li>
+                            <li><a href="#">Sed et dapibus quis</a></li>
+                        </ul>
+                    </section>
+                    <section class="3u 6u$(narrower) 12u$(mobilep)">
+                        <h3>More Links to Stuff</h3>
+                        <ul class="links">
+                            <li><a href="#">Duis neque nisi dapibus</a></li>
+                            <li><a href="#">Sed et dapibus quis</a></li>
+                            <li><a href="#">Rutrum accumsan sed</a></li>
+                        </ul>
+                    </section>-->
+                </div>
+            </div>
+            <!-- Icons -->
+            <ul class="icons">
+                <li><a href="https://twitter.com/M_L_Guru" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="https://github.com/Machinelearninguru" class="icon fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="https://www.linkedin.com/groups/12030461" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            </ul>
+            <!-- Copyright -->
+            <div class="copyright">
+                <ul class="menu">
+                    <li>&copy; Machine Learning Guru. All rights reserved</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        
+        </div>
+    <!-- Scripts -->
+    <script src="../../../assets/js/jquery.min.js"></script>
+    <script src="../../../assets/js/jquery.dropotron.min.js"></script>
+    <script src="../../../assets/js/skel.min.js"></script>
+    <script src="../../../assets/js/util.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+    <script id="dsq-count-scr" src="//machine-learning-guru.disqus.com/count.js" async></script>
+</body>
+
+</html>
