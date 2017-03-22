@@ -141,14 +141,14 @@ Table, summarize the indicators:
 <center>
 **Table 1**
 =======
-| Attribute        | Description           | option   | Description  |
-| ------------- |-------------| ----- | ----- |
+| Attribute | Description | option | Description  |
+| ------------- | ------------- | ----- | ----- |
 |  -i  | input argument | file\_path | path to the input file |
 |  -vf   |   alias for -filter:v  | transpose=1 | clockwise rotation by 90  |
 |  -vcodec  |   Set the video codec   |  nvenc |   Nvidia Gpu accelerated library  |
 |  -preset  |   increase the quality  | slow |   improves quality  |
 |  -b:v      |  set the video bitrate | 5M |   Set to 5M  |
-|  -acodec   |  set the audio codec   | copy |   only copied & no encoding  |
+|  -acodec   |  set the audio codec   | copy |   only copied and no encoding  |
 
 </center>
 
