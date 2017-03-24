@@ -158,15 +158,15 @@ Table, summarize the indicators:
 Table 1
 =======
 
-  Attribute          Description              Argument               Description
-  ------------------ ------------------------ ---------------------- --------------------------------
-  -i                 input argument           file\_path\_input      path to the input file
-  -filter\_complex   Multiple resize option   nvresize=1:s=540x960   custom size of 540x960
-  -acodec            Set the audio codec      copy                   get the audio stream as is
-  -vcodec            Set the video codec      nvenc                  Nvidia GPU accelerated library
-  -r                 video frame rate         30                     output rate is 30 f/s
-  -b:v               set the video bitrate    3M                     Set to 3M
-  -acodec            set the audio codec      copy                   only copied & no encoding
+  |Attribute      |    Description       |       Argument         |      Description|
+  |:------------------:| |:------------------------:| |:----------------------:| |:--------------------------------:|
+  |-i              |   input argument      |     file\_path\_input  |    path to the input file|
+ | -filter\_complex |  Multiple resize option  | nvresize=1:s=540x960|   custom size of 540x960|
+  |-acodec      |      Set the audio codec   |   copy                |   get the audio stream as is|
+ | -vcodec       |     Set the video codec   |   nvenc              |    Nvidia GPU accelerated library|
+ | -r           |      video frame rate      |   30                 |    output rate is 30 f/s|
+ | -b:v          |     set the video bitrate |   3M                 |    Set to 3M|
+  |-acodec       |     set the audio codec   |   copy               |    only copied & no encoding|
 
 
 The `-vf` is the main command which its full documentation is available at [here](https://ffmpeg.org/ffmpeg.html#filter_005foption) and it has the **filter options**.
