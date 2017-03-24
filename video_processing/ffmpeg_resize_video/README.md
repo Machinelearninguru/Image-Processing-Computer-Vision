@@ -192,12 +192,12 @@ idea of how to do it. Consider the following commands:
 
 
 ```shell
--   for i in \*\*/\*.mov; do
--   &gt; base=\${i%.mov};
--   &gt; ffmpeg -y -i file\_path\_input -filter\_complex
-    nvresize=1:s=540x960:readback=0\[out0\] -map \[out0\] -acodec copy
+for i in \*\*/\*.mov; do
+> base=\${i%.mov};
+> ffmpeg -y -i file\_path\_input -filter\_complex
+> nvresize=1:s=540x960:readback=0\[out0\] -map \[out0\] -acodec copy
     -r 30 -vcodec nvenc -b:v 3M base=\${i%.mkv};
--   &gt; done
+> done
 ```
 
 
