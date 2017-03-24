@@ -28,7 +28,7 @@ import sys
 
 # Pre...
 textfile_path = 'videos.txt'
-output_dir_base = '/media/sina/3F8C28A65EBC23F1/Research/DataSet/WVU_TWIN_DAY_PROCESSED/VIDEO'
+output_dir_base = 'Full/Path/to/VIDEO'
 
 # Read the text file
 with open(textfile_path) as f:
