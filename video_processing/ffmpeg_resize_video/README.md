@@ -155,7 +155,7 @@ Documentation](http://ffmpeg.org/ffmpeg-filters.html). The following
 Table, summarize the indicators:
 
 
-Table 1 {#table-1 align="center"}
+Table 1
 =======
 
   Attribute          Description              Argument               Description
