@@ -62,12 +62,10 @@ assumption is that the full path of each video is stored in a
 [.txt]{.inner_shadow} file in line-by-line format. The example of the
 ".txt" file is as below:
 
-
-[![Linkedin](../../../_images/topics/computer_vision/video_processing/ffmpeg_rotate_video/txtfileformat.png){width="600"
-height="400"}](../../../_images/topics/computer_vision/video_processing/ffmpeg_rotate_video/txtfileformat.png)
-
-
-**Figure 1:** The format of .txt file.
+<p align="center">
+  <img src="_images/txtfileformat.png"><br>
+  <b>Figure 1: The format of .txt file.</b><br>
+</p>
 
 
 As a guidance if a recursive search for specific files in a directory
