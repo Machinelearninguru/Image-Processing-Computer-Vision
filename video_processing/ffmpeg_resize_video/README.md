@@ -199,8 +199,6 @@ for i in \*\*/\*.mov; do
     -r 30 -vcodec nvenc -b:v 3M base=\${i%.mkv};
 > done
 ```
-
-
 By the assumption that the `globstar` is enabled(in order
 to make sure about that, the command of `shopt -s globstar` can be executed in the terminal.), the above
 command find all the files with the **".mov"** extension in the current
@@ -209,7 +207,8 @@ with the **".mkv"** extension. The advantage of globstar is that it is
 recursive and robust in cases that there is white space in a file or
 directory name. The command can be altered arbitrary to read the files
 from a text file and do the processing.
-Summary {#Summary}
+
+Summary
 -------
 
 This tutorial demonstrated how to process a video and specifically
