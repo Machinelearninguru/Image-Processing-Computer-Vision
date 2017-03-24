@@ -180,10 +180,10 @@ following:
 ```shell
 python /absolute/path/to/python/file
 ```
-
 As a consideration, if we are working on any specific virtual
 environment it has to be activated at first.
-Working in Bash Shell {#Working in Bash Shell}
+
+Working in Bash Shell
 ---------------------
 
 A similar approach can be employed in the terminal too. Running commands
