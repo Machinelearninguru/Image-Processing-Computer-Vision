@@ -158,7 +158,7 @@ Table, summarize the indicators:
 Table 1
 =======
 
-  |Attribute      |    Description       |       Argument         |      Description|
+  | Attribute      |    Description       |       Argument         |      Description |
   |:------------------:| |:------------------------:| |:----------------------:| |:--------------------------------:|
   |-i              |   input argument      |     file\_path\_input  |    path to the input file|
  | -filter\_complex |  Multiple resize option  | nvresize=1:s=540x960|   custom size of 540x960|
