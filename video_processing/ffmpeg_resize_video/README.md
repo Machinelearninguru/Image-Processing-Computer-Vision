@@ -74,10 +74,9 @@ desired, the following method in command line is useful and it saves the
 output as a ".txt" file:
 
 
-Search for Specific Files
-
--   find /absolute/path/to/directory/to/be/search -type f -name
-    "\*.mov" &gt; /absolute/path/to/save/the/output/textfile.txt
+```shell
+find /absolute/path/to/directory/to/be/search -type f -name "\*.mov" &gt; /absolute/path/to/save/the/output/textfile.txt
+```
 
 Video Resize
 ------------
@@ -170,20 +169,17 @@ Table 1 {#table-1 align="center"}
   -acodec            set the audio codec      copy                   only copied & no encoding
 
 
-The `-vf` is the main command which its full
-documentation is available at
-[here](https://ffmpeg.org/ffmpeg.html#filter_005foption) and it has the
-**filter options**.
-Code Execution {#Code Execution}
+The `-vf` is the main command which its full documentation is available at [here](https://ffmpeg.org/ffmpeg.html#filter_005foption) and it has the **filter options**.
+
+Code Execution 
 --------------
 
 In order to run the python file we go to the terminal and execute the
 following:
 
-Build Essentials
-
--   python /absolute/path/to/python/file
-
+```shell
+python /absolute/path/to/python/file
+```
 
 As a consideration, if we are working on any specific virtual
 environment it has to be activated at first.
@@ -195,14 +191,14 @@ in Terminal can be much faster than Python. So it is useful to have and
 idea of how to do it. Consider the following commands:
 
 
-Build Essentials
-
+```shell
 -   for i in \*\*/\*.mov; do
 -   &gt; base=\${i%.mov};
 -   &gt; ffmpeg -y -i file\_path\_input -filter\_complex
     nvresize=1:s=540x960:readback=0\[out0\] -map \[out0\] -acodec copy
     -r 30 -vcodec nvenc -b:v 3M base=\${i%.mkv};
 -   &gt; done
+```
 
 
 By the assumption that the `globstar` is enabled(in order
