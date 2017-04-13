@@ -110,24 +110,17 @@ codec. More details can be found at `FFmpeg Filters
 Documentation <http://ffmpeg.org/ffmpeg-filters.html>`_. The fllowing
 Table, summarize the indicators:
 
-| Attribute | Description | option | Description  |
-| :-------------: | :-------------: | :-----: | :-----: |
-|  -i  | input argument | file\_path | path to the input file |
-|  -vf   |   alias for -filter:v  | transpose=1 | clockwise rotation by 90  |
-|  -vcodec  |   Set the video codec   |  nvenc |   Nvidia Gpu accelerated library  |
-|  -preset  |   increase the quality  | slow |   improves quality  |
-|  -b:v      |  set the video bitrate | 5M |   Set to 5M  |
-|  -acodec   |  set the audio codec   | copy |   only copied and no encoding  |
 
-+---+--------------------------------------------+
++---+----------------+---------------------------+
 | # |  Attribute     |    Description            | 
-+===+============================================+
++===+================+===========================+
 | 1 |    -i          |  path to the input file   | 
-+---+--------------------------------------------+
++---+----------------+---------------------------+
 | 2 |    -codec:a    |  audio codec              | 
-+---+--------------------------------------------+
++---+----------------+---------------------------+
 | 3 |    -ac         |  number of audio channels | 
-+---+--------------------------------------------+
++---+----------------+---------------------------+
+
 
 
 The ``-vf`` is the main command which its full
