@@ -84,9 +84,8 @@ Overall Code Description
 ------------------------
 
 The ``videos.txt`` file is saved in the absolute path.
-**Lines 8-13** of the code reads the ``.txt`` file and stores each line as
-an item of a list called ``files_list``. The loop starts
-at **line 17** process each file with the
+The code reads the ``.txt`` file and stores each line as
+an item of a list called ``files_list``. The loop processes each file with the
 ``subprocess.call`` command. In each loop the folder of the
 input file is found and the output file will be stored in the same
 directory but with different naming convention which is explaned by the
@@ -96,7 +95,7 @@ correspondant shell command is as below:
 
 .. code:: bash
 
-    ffmpeg -i file_path -filter:v transpose=-1 -vcodec nvenc -preset slow -b:v 5M -acodec copy output_file_path
+    for i in **/*.mp4; do base=${i%.mp4}; ffmpeg -i $base.mp4 -codec:a pcm_s16le -ac  1 $base.wav; done
 
 --------------
 FFmpeg Encoder
@@ -107,8 +106,8 @@ elements started by ``-`` are calling specific operations
 and the command follows by them execute the desired operation. For
 example ``-vcodec`` indicator will specify the **codec** to
 be used by **FFmpeg** and **nvenc** which follows by that point to the
-codec. More details can be found at [FFmpeg Filters
-Documentation](http://ffmpeg.org/ffmpeg-filters.html). The fllowing
+codec. More details can be found at `FFmpeg Filters
+Documentation <http://ffmpeg.org/ffmpeg-filters.html>`_. The fllowing
 Table, summarize the indicators:
 
 | Attribute | Description | option | Description  |
@@ -120,10 +119,19 @@ Table, summarize the indicators:
 |  -b:v      |  set the video bitrate | 5M |   Set to 5M  |
 |  -acodec   |  set the audio codec   | copy |   only copied and no encoding  |
 
++---+--------------------------------------------+
+| # |  Attribute     |    Description            | 
++===+============================================+
+| 1 |    -i          |  path to the input file   | 
++---+--------------------------------------------+
+| 2 |    -codec:a    |  audio codec              | 
++---+--------------------------------------------+
+| 3 |    -ac         |  number of audio channels | 
++---+--------------------------------------------+
+
 
 The ``-vf`` is the main command which its full
-documentation is available at
-[here](https://ffmpeg.org/ffmpeg.html#filter_005foption) and it has the
+documentation is available at `here <https://ffmpeg.org/ffmpeg.html#filter_005foption>`_ and it has the
 **filter options**.
 
 ---------------
@@ -145,9 +153,7 @@ environment it has to be activated at first.
 Summary
 -------
 
-This tutorial demonstrated how to process a video and specifictly
-rotating that using **FFmpeg** and Nvidia GPU accelerated library called
-**NVENC**. The advantage of using python interface is to easily parse
+This tutorial demonstrated how to extract audio from a video and specifically using **FFmpeg** and Nvidia GPU accelerated library called **NVENC**. The advantage of using python interface is to easily parse
 the **.txt** file and looping through all files. Moreover it enables the
 user with options which are more complex to be directly employed in the
 terminal environment.
