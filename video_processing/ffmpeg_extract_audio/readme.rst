@@ -19,10 +19,8 @@ faster than traditional ones. In order to be able to utilize this
 gpu-accelerated encoder, FFmpeg must be installed with NVENC support.
 The full documentation of FFmpeg integrated with NVIDIA can be fount at
 `here <https://developer.nvidia.com/ffmpeg>`_. documentation on NVENC can
-be found
-[here](https://developer.nvidia.com/nvidia-video-codec-sdk#NVENCFeatures).
-Moreover The NVENC programming guide can be found
-[here](https://developer.nvidia.com/nvidia-video-codec-sdk#NVENCFeatures).
+be found `here <https://developer.nvidia.com/nvidia-video-codec-sdk#NVENCFeatures>`_
+Moreover The NVENC programming guide can be found `here <https://developer.nvidia.com/nvidia-video-codec-sdk#NVENCFeatures>`_.
 
 In this tutorial the main goal is to show how to extract audio from video with
 GPU-accelerated libraries in Linux. In this tutorial we do not use the
@@ -32,15 +30,14 @@ terminal. This can be done using ``subprocess`` python
 module. This module is employed for execution and dealing external
 commands, intended to supercede the ``os.sys`` module. The
 trivial method os its usage will be explained in this tutorial. Please
-refer to [this
-documentation](https://docs.python.org/2/library/subprocess.html) for
+refer to `this
+documentation <https://docs.python.org/2/library/subprocess.html>`_ for
 further details.
 
 The assumption of this tutorial is that the FFmpeg is already installed
-with NVENC support. The installation guide can be found in [FFMPEG WITH
-NVIDIA ACCELERATION ON UBUNTU
-LINUX](http://developer.download.nvidia.com/compute/redist/ffmpeg/1511-patch/FFMPEG-with-NVIDIA-Acceleration-on-Ubuntu_UG_v01.pdf)
-documentation provided by NVIDIA.
+with NVENC support. The installation guide can be found in `FFMPEG WITH
+NVIDIA ACCELERATION ON UBUNTU 
+LINUX <http://developer.download.nvidia.com/compute/redist/ffmpeg/1511-patch/FFMPEG-with-NVIDIA-Acceleration-on-Ubuntu_UG_v01.pdf>`_ documentation provided by NVIDIA.
 
 ----------------
 Extracting Audio
