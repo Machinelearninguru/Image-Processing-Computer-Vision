@@ -122,11 +122,6 @@ Table, summarize the indicators:
 +---+----------------+---------------------------+
 
 
-
-The ``-vf`` is the main command which its full
-documentation is available at `here <https://ffmpeg.org/ffmpeg.html#filter_005foption>`_ and it has the
-**filter options**.
-
 ---------------
 Code Execution
 ---------------
