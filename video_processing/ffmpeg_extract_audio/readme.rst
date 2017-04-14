@@ -53,7 +53,7 @@ well-formatted. The python script for processing videos is as below:
   import sys
 
   # Pre...
-  textfile_path = 'videos.txt'
+  textfile_path = 'absolute/path/to/videos.txt'
 
   # Read the text file
   with open(textfile_path) as f:
