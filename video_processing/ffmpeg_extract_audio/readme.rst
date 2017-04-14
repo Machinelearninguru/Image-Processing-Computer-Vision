@@ -116,9 +116,9 @@ Table, summarize the indicators:
 +===+================+===========================+
 | 1 |    -i          |  path to the input file   | 
 +---+----------------+---------------------------+
-| 2 |    -codec:a    |        audio codec        | 
+| 2 |  -codec:a      |        audio codec        | 
 +---+----------------+---------------------------+
-| 3 |    -ac         |  number of audio channels | 
+| 3 |     -ac        |  number of audio channels | 
 +---+----------------+---------------------------+
 
 
