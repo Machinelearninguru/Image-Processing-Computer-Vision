@@ -112,7 +112,7 @@ Table, summarize the indicators:
 
 
 +---+----------------+---------------------------+
-| # |  Attribute     |    Description            | 
+| # |    Attribute   |       Description         | 
 +===+================+===========================+
 | 1 |      -i        |  path to the input file   | 
 +---+----------------+---------------------------+
