@@ -12,9 +12,9 @@ along with Pooling and fully-connected layers and create the basis of
 deep learning. So if you want to go deeper into CNNs and deep learning,
 the first step is to get more familiar with how Convolutional Layers
 work. If you are not familiar with applying 2D filters on images, we
-urgely suggest you to first have a look at our previous post about image
-filtering [here](image_convolution_1.html). In the [image
-filtering](image_convolution_1.html) post, we talked about convolving a
+urgely suggest you to first have a look at our previous post about [image
+filtering](https://github.com/Machinelearninguru/Image-Processing-Computer-Vision/blob/master/basics/Image%20Filtering/README.md). In the [image
+filtering](https://github.com/Machinelearninguru/Image-Processing-Computer-Vision/blob/master/basics/Image%20Filtering/README.md) post, we talked about convolving a
 filter with an image. In that post, we had a 2D filter kernel (a 2D
 matrix) and a single channel image (grayscale image). To calculate the
 convolution, we swept the kernel (if you remember we should flip the
